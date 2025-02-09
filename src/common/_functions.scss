@@ -1,0 +1,18 @@
+@use "sass:map";
+
+// 数値の範囲を生成する関数（マイナス値とauto対応）
+@function generate-range($start, $end, $include_auto: false) {
+  $range: ();
+  @for $i from $start through $end {
+    // マイナス値の場合は "n(negative)" を付けてキーを生成
+    $key: if($i < 0, "n#{abs($i)}", "#{$i}");
+    $range: map.set($range, $key, $i);
+  }
+
+  // autoを追加（単位なしで追加）
+  @if $include_auto {
+    $range: map.set($range, "auto", "auto");
+  }
+
+  @return $range;
+}

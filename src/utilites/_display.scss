@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+
+$display-values: (
+  "block": block,
+  "inline": inline,
+  "inline_block": inline-block,
+  "flex": flex,
+  "grid": grid,
+  "none": none
+) !default;
+
+@include generate-utility-classes("d", $display-values) using ($value) {
+  display: $value;
+}
+
+

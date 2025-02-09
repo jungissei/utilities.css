@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+$text-align-values: (
+  "left": left,
+  "center": center,
+  "right": right,
+  "justify": justify
+) !default;
+
+@include generate-utility-classes("ta", $text-align-values) using ($value) {
+  text-align: $value;
+}

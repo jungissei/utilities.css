@@ -1,0 +1,33 @@
+$breakpoints: (
+  "pc": "print, screen and (min-width: 768px)",
+  "sp": "screen and (max-width: 767px)",
+) !default;
+
+// ブレイクポイント用のmixin
+@mixin generate-utility-classes($class-prefix, $values, $unit_suffix: null) {
+  // ブレイクポイントなしのベースクラス
+  @each $name, $value in $values {
+    $suffix: if($value == "auto", "", $unit_suffix);
+    // クラス名に単位を付ける（%の場合はpctに変換）
+    $class_suffix: if($suffix == "%", "pct", $suffix);
+
+    .#{$class-prefix}_#{$name}#{$class_suffix} {
+      @content($value);
+    }
+  }
+
+  // ブレイクポイントごとのクラス
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @media #{$breakpoint-value} {
+      @each $name, $value in $values {
+        $suffix: if($value == "auto", "", $unit_suffix);
+        // クラス名に単位を付ける（%の場合はpctに変換）
+        $class_suffix: if($suffix == "%", "pct", $suffix);
+
+        .#{$class-prefix}_#{$name}#{$class_suffix}_#{$breakpoint-name} {
+          @content($value);
+        }
+      }
+    }
+  }
+}
