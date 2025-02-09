@@ -43,3 +43,11 @@ $padding-px: generate-range(-100, 100, false);
 
 // %単位
 $padding-percent: generate-range(-100, 100, false);
+
+
+
+// --------------------------------------
+// @see src/utilites/_gap.scss
+// --------------------------------------
+$gap-px: generate-range(1, 100);
+$gap-percent: generate-range(0, 100);

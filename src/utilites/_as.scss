@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+
+$align-self-values: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+  "auto": auto
+) !default;
+
+
+@include generate-utility-classes("as", $align-self-values) using ($value) {
+  align-self: $value;
+}

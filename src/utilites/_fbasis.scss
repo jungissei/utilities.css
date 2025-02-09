@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+
+$flex-basis-values: (
+  "auto": auto,
+  "0": 0
+) !default;
+
+
+@include generate-utility-classes("fbasis", $flex-basis-values) using ($value) {
+  flex-basis: $value;
+}
+

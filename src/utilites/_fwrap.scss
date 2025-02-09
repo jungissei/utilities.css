@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+$flex-wrap-values: (
+  "nowrap": nowrap,
+  "wrap": wrap,
+  "wrap-reverse": wrap-reverse
+) !default;
+
+
+@include generate-utility-classes("fwrap", $flex-wrap-values) using ($value) {
+  flex-wrap: $value;
+}

@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+@include generate-utility-classes("gap", $gap-px, "px") using ($value) {
+  gap: $value + px;
+}
+
+@include generate-utility-classes("gap", $gap-percent, "%") using ($value) {
+  gap: $value * 1%;
+}
+
+@include generate-utility-classes("gap_col", $gap-px, "px") using ($value) {
+  column-gap: $value + px;
+}
+
+@include generate-utility-classes("gap_col", $gap-percent, "%") using ($value) {
+  column-gap: $value * 1%;
+}
+
+@include generate-utility-classes("gap_row", $gap-px, "px") using ($value) {
+  row-gap: $value + px;
+}
+
+@include generate-utility-classes("gap_row", $gap-percent, "%") using ($value) {
+  row-gap: $value * 1%;
+}
+
