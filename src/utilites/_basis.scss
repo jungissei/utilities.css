@@ -11,7 +11,7 @@ $flex-basis-values: (
 ) !default;
 
 
-@include generate-utility-classes("fbasis", $flex-basis-values) using ($value) {
+@include generate-utility-classes("basis", $flex-basis-values) using ($value) {
   flex-basis: $value;
 }
 

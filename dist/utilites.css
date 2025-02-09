@@ -86841,27 +86841,27 @@
     row-gap: 100%;
   }
 }
-.fbasis-auto {
+.basis-auto {
   flex-basis: auto;
 }
 
-.fbasis-0 {
+.basis-0 {
   flex-basis: 0;
 }
 
 @media print, screen and (min-width: 768px) {
-  .pc:fbasis-auto {
+  .pc:basis-auto {
     flex-basis: auto;
   }
-  .pc:fbasis-0 {
+  .pc:basis-0 {
     flex-basis: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp:fbasis-auto {
+  .sp:basis-auto {
     flex-basis: auto;
   }
-  .sp:fbasis-0 {
+  .sp:basis-0 {
     flex-basis: 0;
   }
 }
