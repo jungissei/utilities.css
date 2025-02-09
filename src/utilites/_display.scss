@@ -8,13 +8,13 @@
 $display-values: (
   "block": block,
   "inline": inline,
-  "inline_block": inline-block,
+  "inline-block": inline-block,
   "flex": flex,
   "grid": grid,
   "none": none
 ) !default;
 
-@include generate-utility-classes("d", $display-values) using ($value) {
+@include generate-utility-classes("", $display-values) using ($value) {
   display: $value;
 }
 

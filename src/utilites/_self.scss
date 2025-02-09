@@ -15,6 +15,6 @@ $align-self-values: (
 ) !default;
 
 
-@include generate-utility-classes("as", $align-self-values) using ($value) {
+@include generate-utility-classes("self", $align-self-values) using ($value) {
   align-self: $value;
 }
