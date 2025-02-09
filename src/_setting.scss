@@ -4,9 +4,9 @@
 // @see src/utilites/_font-size.scss
 // --------------------------------------
 // px単位
-$font-sizes-px: generate-range(1, 100);
+$font-sizes-px: generate-range(10, 50);
 // em単位
-$font-sizes-em: generate-range(1, 100);
+$font-sizes-em: generate-range(1, 10);
 
 
 // --------------------------------------
@@ -23,6 +23,24 @@ $width-px: generate-range(1, 500);
 
 // %単位
 $width-percent: generate-range(1, 100);
+
+// --------------------------------------
+// @see src/utilites/_max-width.scss
+// --------------------------------------
+// px単位
+$max-width-px: generate-range(1, 500);
+
+// %単位
+$max-width-percent: generate-range(1, 100);
+
+// --------------------------------------
+// @see src/utilites/_min-width.scss
+// --------------------------------------
+// px単位
+$min-width-px: generate-range(1, 500);
+
+// %単位
+$min-width-percent: generate-range(1, 100);
 
 
 // --------------------------------------

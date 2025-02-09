@@ -11,7 +11,7 @@ $breakpoints: (
     // クラス名に単位を付ける（%の場合はpctに変換）
     $class_suffix: if($suffix == "%", "pct", $suffix);
 
-    .#{$class-prefix}_#{$name}#{$class_suffix} {
+    .#{$class-prefix}-#{$name}#{$class_suffix} {
       @content($value);
     }
   }
@@ -24,7 +24,7 @@ $breakpoints: (
         // クラス名に単位を付ける（%の場合はpctに変換）
         $class_suffix: if($suffix == "%", "pct", $suffix);
 
-        .#{$class-prefix}_#{$name}#{$class_suffix}_#{$breakpoint-name} {
+        .#{$breakpoint-name}:#{$class-prefix}-#{$name}#{$class_suffix} {
           @content($value);
         }
       }
