@@ -28,3 +28,42 @@ $align-self-values: (
 @include generate-utility-classes("as", $align-self-values) using ($value) {
   align-self: $value;
 }
+
+
+
+$flex-wrap-values: (
+  "nowrap": nowrap,
+  "wrap": wrap,
+  "wrap-reverse": wrap-reverse
+) !default;
+
+$flex-shrink-values: (
+  "0": 0,
+  "1": 1
+) !default;
+
+$flex-grow-values: (
+  "0": 0,
+  "1": 1
+) !default;
+
+$flex-basis-values: (
+  "auto": auto,
+  "0": 0
+) !default;
+
+@include generate-utility-classes("fw", $flex-wrap-values) using ($value) {
+  flex-wrap: $value;
+}
+
+@include generate-utility-classes("fshrink", $flex-shrink-values) using ($value) {
+  flex-shrink: $value;
+}
+
+@include generate-utility-classes("fgrow", $flex-grow-values) using ($value) {
+  flex-grow: $value;
+}
+
+@include generate-utility-classes("fbasis", $flex-basis-values) using ($value) {
+  flex-basis: $value;
+}
