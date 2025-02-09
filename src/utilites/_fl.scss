@@ -21,10 +21,10 @@ $align-self-values: (
   "auto": auto
 ) !default;
 
-@include generate-utility-classes("align_items", $align-items-values) using ($value) {
+@include generate-utility-classes("ai", $align-items-values) using ($value) {
   align-items: $value;
 }
 
-@include generate-utility-classes("align_self", $align-self-values) using ($value) {
+@include generate-utility-classes("as", $align-self-values) using ($value) {
   align-self: $value;
 }

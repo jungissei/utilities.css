@@ -69658,121 +69658,121 @@
     padding-inline: 100%;
   }
 }
-.align_items_start {
+.ai_start {
   align-items: flex-start;
 }
 
-.align_items_end {
+.ai_end {
   align-items: flex-end;
 }
 
-.align_items_center {
+.ai_center {
   align-items: center;
 }
 
-.align_items_baseline {
+.ai_baseline {
   align-items: baseline;
 }
 
-.align_items_stretch {
+.ai_stretch {
   align-items: stretch;
 }
 
 @media print, screen and (min-width: 768px) {
-  .align_items_start_pc {
+  .ai_start_pc {
     align-items: flex-start;
   }
-  .align_items_end_pc {
+  .ai_end_pc {
     align-items: flex-end;
   }
-  .align_items_center_pc {
+  .ai_center_pc {
     align-items: center;
   }
-  .align_items_baseline_pc {
+  .ai_baseline_pc {
     align-items: baseline;
   }
-  .align_items_stretch_pc {
+  .ai_stretch_pc {
     align-items: stretch;
   }
 }
 @media screen and (max-width: 767px) {
-  .align_items_start_sp {
+  .ai_start_sp {
     align-items: flex-start;
   }
-  .align_items_end_sp {
+  .ai_end_sp {
     align-items: flex-end;
   }
-  .align_items_center_sp {
+  .ai_center_sp {
     align-items: center;
   }
-  .align_items_baseline_sp {
+  .ai_baseline_sp {
     align-items: baseline;
   }
-  .align_items_stretch_sp {
+  .ai_stretch_sp {
     align-items: stretch;
   }
 }
-.align_self_start {
+.as_start {
   align-self: flex-start;
 }
 
-.align_self_end {
+.as_end {
   align-self: flex-end;
 }
 
-.align_self_center {
+.as_center {
   align-self: center;
 }
 
-.align_self_baseline {
+.as_baseline {
   align-self: baseline;
 }
 
-.align_self_stretch {
+.as_stretch {
   align-self: stretch;
 }
 
-.align_self_auto {
+.as_auto {
   align-self: auto;
 }
 
 @media print, screen and (min-width: 768px) {
-  .align_self_start_pc {
+  .as_start_pc {
     align-self: flex-start;
   }
-  .align_self_end_pc {
+  .as_end_pc {
     align-self: flex-end;
   }
-  .align_self_center_pc {
+  .as_center_pc {
     align-self: center;
   }
-  .align_self_baseline_pc {
+  .as_baseline_pc {
     align-self: baseline;
   }
-  .align_self_stretch_pc {
+  .as_stretch_pc {
     align-self: stretch;
   }
-  .align_self_auto_pc {
+  .as_auto_pc {
     align-self: auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .align_self_start_sp {
+  .as_start_sp {
     align-self: flex-start;
   }
-  .align_self_end_sp {
+  .as_end_sp {
     align-self: flex-end;
   }
-  .align_self_center_sp {
+  .as_center_sp {
     align-self: center;
   }
-  .align_self_baseline_sp {
+  .as_baseline_sp {
     align-self: baseline;
   }
-  .align_self_stretch_sp {
+  .as_stretch_sp {
     align-self: stretch;
   }
-  .align_self_auto_sp {
+  .as_auto_sp {
     align-self: auto;
   }
 }
