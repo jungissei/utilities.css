@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+$align-items-values: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch
+) !default;
+
+$align-self-values: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+  "auto": auto
+) !default;
+
+@include generate-utility-classes("align_items", $align-items-values) using ($value) {
+  align-items: $value;
+}
+
+@include generate-utility-classes("align_self", $align-self-values) using ($value) {
+  align-self: $value;
+}
