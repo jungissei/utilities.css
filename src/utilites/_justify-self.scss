@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+$justify-self-values: (
+  "auto": auto,
+  "start": start,
+  "end": end,
+  "center": center,
+  "stretch": stretch,
+) !default;
+
+@include generate-utility-classes("justify-self", $justify-self-values) using ($value) {
+  justify-self: $value;
+}

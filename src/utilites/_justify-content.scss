@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "../common/_breakpoint" as *;
+@use "../common/_functions" as *;
+@use "../setting" as *;
+
+
+$justify-content-values: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around,
+  "evenly": space-evenly,
+  "stretch": stretch,
+  "baseline": baseline,
+  "normal": normal,
+) !default;
+
+@include generate-utility-classes("justify", $justify-content-values) using ($value) {
+  justify-content: $value;
+}

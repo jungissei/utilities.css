@@ -69,3 +69,9 @@ $padding-percent: generate-range(0, 100, false);
 // --------------------------------------
 $gap-px: generate-range(0, 100);
 $gap-percent: generate-range(0, 100);
+
+
+// --------------------------------------
+// @see src/utilites/_order.scss
+// --------------------------------------
+$order-values: generate-range(0, 10);
