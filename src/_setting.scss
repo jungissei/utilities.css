@@ -24,6 +24,9 @@ $width-px: generate-range(1, 200);
 // %単位
 $width-percent: generate-range(1, 100);
 
+// em単位
+$width-em: generate-range(1, 10);
+
 // --------------------------------------
 // @see src/utilites/_max-width.scss
 // --------------------------------------

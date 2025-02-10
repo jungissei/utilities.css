@@ -3432,6 +3432,110 @@
     width: 100%;
   }
 }
+.w-1em {
+  width: 1em;
+}
+
+.w-2em {
+  width: 2em;
+}
+
+.w-3em {
+  width: 3em;
+}
+
+.w-4em {
+  width: 4em;
+}
+
+.w-5em {
+  width: 5em;
+}
+
+.w-6em {
+  width: 6em;
+}
+
+.w-7em {
+  width: 7em;
+}
+
+.w-8em {
+  width: 8em;
+}
+
+.w-9em {
+  width: 9em;
+}
+
+.w-10em {
+  width: 10em;
+}
+
+@media print, screen and (min-width: 768px) {
+  .pc:w-1em {
+    width: 1em;
+  }
+  .pc:w-2em {
+    width: 2em;
+  }
+  .pc:w-3em {
+    width: 3em;
+  }
+  .pc:w-4em {
+    width: 4em;
+  }
+  .pc:w-5em {
+    width: 5em;
+  }
+  .pc:w-6em {
+    width: 6em;
+  }
+  .pc:w-7em {
+    width: 7em;
+  }
+  .pc:w-8em {
+    width: 8em;
+  }
+  .pc:w-9em {
+    width: 9em;
+  }
+  .pc:w-10em {
+    width: 10em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sp:w-1em {
+    width: 1em;
+  }
+  .sp:w-2em {
+    width: 2em;
+  }
+  .sp:w-3em {
+    width: 3em;
+  }
+  .sp:w-4em {
+    width: 4em;
+  }
+  .sp:w-5em {
+    width: 5em;
+  }
+  .sp:w-6em {
+    width: 6em;
+  }
+  .sp:w-7em {
+    width: 7em;
+  }
+  .sp:w-8em {
+    width: 8em;
+  }
+  .sp:w-9em {
+    width: 9em;
+  }
+  .sp:w-10em {
+    width: 10em;
+  }
+}
 .max-w-1px {
   max-width: 1px;
 }

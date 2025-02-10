@@ -10,3 +10,7 @@
 @include generate-utility-classes("w", $width-percent, "%") using ($value) {
   width: $value * 1%;
 }
+
+@include generate-utility-classes("w", $width-em, "em") using ($value) {
+  width: $value + em;
+}
