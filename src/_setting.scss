@@ -4,7 +4,7 @@
 // @see src/utilites/_font-size.scss
 // --------------------------------------
 // px単位
-$font-sizes-px: generate-range(10, 50);
+$font-sizes-px: generate-range(10, 30);
 // em単位
 $font-sizes-em: generate-range(1, 10);
 
@@ -19,7 +19,7 @@ $height-px: generate-range(1, 500);
 // @see src/utilites/_width.scss
 // --------------------------------------
 // px単位
-$width-px: generate-range(1, 500);
+$width-px: generate-range(1, 200);
 
 // %単位
 $width-percent: generate-range(1, 100);
@@ -28,7 +28,7 @@ $width-percent: generate-range(1, 100);
 // @see src/utilites/_max-width.scss
 // --------------------------------------
 // px単位
-$max-width-px: generate-range(1, 500);
+$max-width-px: generate-range(1, 200);
 
 // %単位
 $max-width-percent: generate-range(1, 100);
@@ -37,7 +37,7 @@ $max-width-percent: generate-range(1, 100);
 // @see src/utilites/_min-width.scss
 // --------------------------------------
 // px単位
-$min-width-px: generate-range(1, 500);
+$min-width-px: generate-range(1, 200);
 
 // %単位
 $min-width-percent: generate-range(1, 100);
@@ -50,22 +50,22 @@ $min-width-percent: generate-range(1, 100);
 $margin-px: generate-range(-100, 100, true);
 
 // %単位
-$margin-percent: generate-range(-100, 100, true);
+$margin-percent: generate-range(0, 100, true);
 
 
 // --------------------------------------
 // @see src/utilites/_padding.scss
 // --------------------------------------
 // px単位
-$padding-px: generate-range(-100, 100, false);
+$padding-px: generate-range(0, 100, false);
 
 // %単位
-$padding-percent: generate-range(-100, 100, false);
+$padding-percent: generate-range(0, 100, false);
 
 
 
 // --------------------------------------
 // @see src/utilites/_gap.scss
 // --------------------------------------
-$gap-px: generate-range(1, 100);
+$gap-px: generate-range(0, 100);
 $gap-percent: generate-range(0, 100);
