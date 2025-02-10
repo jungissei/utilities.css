@@ -11,6 +11,6 @@ $text-align-values: (
   "justify": justify
 ) !default;
 
-@include generate-utility-classes("ta", $text-align-values) using ($value) {
+@include generate-utility-classes("text-align", $text-align-values) using ($value) {
   text-align: $value;
 }

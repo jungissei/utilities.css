@@ -580,47 +580,47 @@
     font-size: 10em;
   }
 }
-.ta-left {
+.text-align-left {
   text-align: left;
 }
 
-.ta-center {
+.text-align-center {
   text-align: center;
 }
 
-.ta-right {
+.text-align-right {
   text-align: right;
 }
 
-.ta-justify {
+.text-align-justify {
   text-align: justify;
 }
 
 @media print, screen and (min-width: 768px) {
-  .pc:ta-left {
+  .pc:text-align-left {
     text-align: left;
   }
-  .pc:ta-center {
+  .pc:text-align-center {
     text-align: center;
   }
-  .pc:ta-right {
+  .pc:text-align-right {
     text-align: right;
   }
-  .pc:ta-justify {
+  .pc:text-align-justify {
     text-align: justify;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp:ta-left {
+  .sp:text-align-left {
     text-align: left;
   }
-  .sp:ta-center {
+  .sp:text-align-center {
     text-align: center;
   }
-  .sp:ta-right {
+  .sp:text-align-right {
     text-align: right;
   }
-  .sp:ta-justify {
+  .sp:text-align-justify {
     text-align: justify;
   }
 }
@@ -86865,85 +86865,85 @@
     flex-basis: 0;
   }
 }
-.fgrow-0 {
+.grow-0 {
   flex-grow: 0;
 }
 
-.fgrow-1 {
+.grow-1 {
   flex-grow: 1;
 }
 
 @media print, screen and (min-width: 768px) {
-  .pc:fgrow-0 {
+  .pc:grow-0 {
     flex-grow: 0;
   }
-  .pc:fgrow-1 {
+  .pc:grow-1 {
     flex-grow: 1;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp:fgrow-0 {
+  .sp:grow-0 {
     flex-grow: 0;
   }
-  .sp:fgrow-1 {
+  .sp:grow-1 {
     flex-grow: 1;
   }
 }
-.fshrink-0 {
+.shrink-0 {
   flex-shrink: 0;
 }
 
-.fshrink-1 {
+.shrink-1 {
   flex-shrink: 1;
 }
 
 @media print, screen and (min-width: 768px) {
-  .pc:fshrink-0 {
+  .pc:shrink-0 {
     flex-shrink: 0;
   }
-  .pc:fshrink-1 {
+  .pc:shrink-1 {
     flex-shrink: 1;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp:fshrink-0 {
+  .sp:shrink-0 {
     flex-shrink: 0;
   }
-  .sp:fshrink-1 {
+  .sp:shrink-1 {
     flex-shrink: 1;
   }
 }
-.fwrap-nowrap {
+.flex-nowrap {
   flex-wrap: nowrap;
 }
 
-.fwrap-wrap {
+.flex-wrap {
   flex-wrap: wrap;
 }
 
-.fwrap-wrap-reverse {
+.flex-wrap-reverse {
   flex-wrap: wrap-reverse;
 }
 
 @media print, screen and (min-width: 768px) {
-  .pc:fwrap-nowrap {
+  .pc:flex-nowrap {
     flex-wrap: nowrap;
   }
-  .pc:fwrap-wrap {
+  .pc:flex-wrap {
     flex-wrap: wrap;
   }
-  .pc:fwrap-wrap-reverse {
+  .pc:flex-wrap-reverse {
     flex-wrap: wrap-reverse;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp:fwrap-nowrap {
+  .sp:flex-nowrap {
     flex-wrap: nowrap;
   }
-  .sp:fwrap-wrap {
+  .sp:flex-wrap {
     flex-wrap: wrap;
   }
-  .sp:fwrap-wrap-reverse {
+  .sp:flex-wrap-reverse {
     flex-wrap: wrap-reverse;
   }
 }

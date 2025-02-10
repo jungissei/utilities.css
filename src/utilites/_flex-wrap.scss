@@ -11,6 +11,6 @@ $flex-wrap-values: (
 ) !default;
 
 
-@include generate-utility-classes("fwrap", $flex-wrap-values) using ($value) {
+@include generate-utility-classes("flex", $flex-wrap-values) using ($value) {
   flex-wrap: $value;
 }
