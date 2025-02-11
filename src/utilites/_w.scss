@@ -3,6 +3,14 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+$width-values: (
+  "auto": auto
+) !default;
+
+@include generate-utility-classes("w", $width-values) using ($value) {
+  width: $value;
+}
+
 @include generate-utility-classes("w", $width-px, "px") using ($value) {
   width: $value + px;
 }
