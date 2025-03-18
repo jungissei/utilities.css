@@ -26,7 +26,7 @@ $breakpoints: (
         $class_suffix: if($suffix == "%", "pct", $suffix);
         $sep: if($class-prefix == "", "", "-");
 
-        .#{$breakpoint-name}:#{$class-prefix}#{$sep}#{$name}#{$class_suffix} {
+        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix} {
           @content($value);
         }
       }
