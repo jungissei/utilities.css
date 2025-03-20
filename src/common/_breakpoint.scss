@@ -1,36 +1,6 @@
 @use "../setting" as *;
 
 
-@mixin generate-utility-css(
-  $property,
-  $class-prefix,
-  $values,
-  $unit_suffix: null,
-  $important: false
-){
-
-  @include generate-utility-css-value(
-    $class-prefix,
-    $values,
-    $unit_suffix,
-    false
-  ) using ($value) {
-    #{$property}: $value;
-  }
-
-  @if $important{
-    @include generate-utility-css-value(
-      $class-prefix,
-      $values,
-      $unit_suffix,
-      true
-    ) using ($value) {
-      #{$property}: $value !important;
-    }
-  }
-}
-
-
 @mixin generate-utility-css-value(
   $class-prefix,
   $values,
