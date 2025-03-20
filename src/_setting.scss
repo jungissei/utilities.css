@@ -1,6 +1,19 @@
 @use "./common/_functions" as *;
 
 // ----------------------------------------------------------------------------
+// # 設定上の注意
+//
+// ## 適正なサイズの目安
+// 一般的に100KB未満が理想的とされています。
+// - 大規模ウェブサイト : 500KB以下
+// - 中規模ウェブサイト : 100KB-200KB以下
+// - 小規模ウェブサイト : 50KB以下
+//
+// 圧縮技術: gzip圧縮を使用すると、元のファイルサイズを大幅に削減できます。
+// ----------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------
 // ブレイクポイント設定
 // ----------------------------------------------------------------------------
 // --------------------------------------
@@ -47,13 +60,13 @@ $width-important: false; // !importantをつけるかどうか
 
 $width-px: generate-range(1, 200);      // px単位
 $width-percent: generate-range(1, 100); // %単位
-$width-em: generate-range(1, 10);       // em単位
+$width-em: generate-range(1, 20);       // em単位
 
 
 // --------------------------------------
 // @see src/utilites/_max-w.scss
 // --------------------------------------
-$max-width-generate: true;   // クラスを生成するかどうか
+$max-width-generate: false;   // クラスを生成するかどうか
 $max-width-important: false; // !importantをつけるかどうか
 
 $max-width-px: generate-range(1, 200);      // px単位
@@ -63,7 +76,7 @@ $max-width-percent: generate-range(1, 100); // %単位
 // --------------------------------------
 // @see src/utilites/_min-w.scss
 // --------------------------------------
-$min-width-generate: true; // クラスを生成するかどうか
+$min-width-generate: false; // クラスを生成するかどうか
 $min-width-important: false; // !importantをつけるかどうか
 
 $min-width-px: generate-range(1, 200);      // px単位
@@ -96,8 +109,8 @@ $padding-percent: generate-range(0, 100, false); // %単位
 $gap-generate: true;   // クラスを生成するかどうか
 $gap-important: false; // !importantをつけるかどうか
 
-$gap-px: generate-range(0, 100);      // px単位
-$gap-percent: generate-range(0, 100); // %単位
+$gap-px: generate-range(0, 30);      // px単位
+$gap-percent: generate-range(0, 20); // %単位
 
 
 // --------------------------------------
