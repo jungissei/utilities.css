@@ -31,8 +31,8 @@ $breakpoints: (
 // --------------------------------------
 // @see src/utilites/_display.scss
 // --------------------------------------
-$display-generate:  true; // クラスを生成するかどうか
-$display-important: true; // !importantをつけるかどうか
+$display-generate:  true;  // クラスを生成するかどうか
+$display-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
