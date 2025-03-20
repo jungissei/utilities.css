@@ -13,6 +13,6 @@ $align-items-values: (
 ) !default;
 
 
-@include generate-utility-css-value("items", $align-items-values) using ($value) {
-  align-items: $value;
+@include generate-utility-css("items", $align-items-values, null, $align-items-important) using ($value, $important_value) {
+  align-items: $value #{$important_value};
 }

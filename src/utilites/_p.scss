@@ -18,20 +18,20 @@ $directions: (
 // 各方向ごとにクラスを生成
 @each $direction-prefix, $direction-value in $directions {
   // px単位
-  @include generate-utility-css-value("p#{$direction-prefix}", $padding-px, "px") using ($value) {
+  @include generate-utility-css("p#{$direction-prefix}", $padding-px, "px", $padding-important) using ($value, $important_value) {
     @if $direction-value == "" {
-      padding: $value + px;
+      padding: $value + px #{$important_value};
     } @else {
-      padding#{$direction-value}: $value + px;
+      padding#{$direction-value}: $value + px #{$important_value};
     }
   }
 
   // %単位
-  @include generate-utility-css-value("p#{$direction-prefix}", $padding-percent, "pct") using ($value) {
+  @include generate-utility-css("p#{$direction-prefix}", $padding-percent, "pct", $padding-important) using ($value, $important_value) {
     @if $direction-value == "" {
-      padding: $value * 1%;
+      padding: $value * 1% #{$important_value};
     } @else {
-      padding#{$direction-value}: $value * 1%;
+      padding#{$direction-value}: $value * 1% #{$important_value};
     }
   }
 }

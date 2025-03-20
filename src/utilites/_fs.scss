@@ -4,10 +4,10 @@
 @use "../setting" as *;
 
 
-@include generate-utility-css-value("fs", $font-sizes-px, "px") using ($value) {
-  font-size: $value + px;
+@include generate-utility-css("fs", $font-sizes-px, "px", $font-size-important) using ($value, $important_value) {
+  font-size: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("fs", $font-sizes-em, "em") using ($value) {
-  font-size: $value + em;
+@include generate-utility-css("fs", $font-sizes-em, "em", $font-size-important) using ($value, $important_value) {
+  font-size: $value + em #{$important_value};
 }

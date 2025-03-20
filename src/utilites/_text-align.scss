@@ -11,6 +11,6 @@ $text-align-values: (
   "justify": justify
 ) !default;
 
-@include generate-utility-css-value("text-align", $text-align-values) using ($value) {
-  text-align: $value;
+@include generate-utility-css("text-align", $text-align-values, null, $text-align-important) using ($value, $important_value) {
+  text-align: $value #{$important_value};
 }

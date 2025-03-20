@@ -29,6 +29,13 @@ $font-sizes-em: generate-range(1, 10);
 
 
 // --------------------------------------
+// @see src/utilites/_text-align.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$text-align-important: false;
+
+
+// --------------------------------------
 // @see src/utilites/_height.scss
 // --------------------------------------
 // !importantをつけるかどうか
@@ -66,6 +73,47 @@ $basis-percent: generate-range(1, 100);
 
 // em単位
 $basis-em: generate-range(1, 10);
+
+
+// --------------------------------------
+// @see src/utilites/_grow.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$flex-grow-important: false;
+
+
+// --------------------------------------
+// @see src/utilites/_shrink.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$flex-shrink-important: false;
+
+
+
+// --------------------------------------
+// @see src/utilites/_flex-wrap.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$flex-wrap-important: false;
+
+
+// --------------------------------------
+// @see src/utilites/_items.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$align-items-important: false;
+
+
+// --------------------------------------
+// @see src/utilites/_self.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$align-self-important: false;
+
+
+
+
+
 
 // --------------------------------------
 // @see src/utilites/_max-width.scss
@@ -138,6 +186,19 @@ $gap-percent: generate-range(0, 100);
 // !importantをつけるかどうか
 $order-important: false;
 
-// px単位
-$order-px: generate-range(0, 10);
+// 数値
+$order-number: generate-range(0, 10);
 
+
+// --------------------------------------
+// @see src/utilites/_justify-content.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$justify-content-important: false;
+
+
+// --------------------------------------
+// @see src/utilites/_justify-self.scss
+// --------------------------------------
+// !importantをつけるかどうか
+$justify-self-important: false;

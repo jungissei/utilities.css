@@ -3,10 +3,10 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
-@include generate-utility-css-value("min-w", $min-width-px, "px") using ($value) {
-  min-width: $value + px;
+@include generate-utility-css("min-w", $min-width-px, "px", $min-width-important) using ($value, $important_value) {
+  min-width: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("min-w", $min-width-percent, "%") using ($value) {
-  min-width: $value * 1%;
+@include generate-utility-css("min-w", $min-width-percent, "%", $min-width-important) using ($value, $important_value) {
+  min-width: $value * 1% #{$important_value};
 }

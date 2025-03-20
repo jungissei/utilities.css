@@ -11,6 +11,6 @@ $flex-wrap-values: (
 ) !default;
 
 
-@include generate-utility-css-value("flex", $flex-wrap-values) using ($value) {
-  flex-wrap: $value;
+@include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important_value) {
+  flex-wrap: $value #{$important_value};
 }

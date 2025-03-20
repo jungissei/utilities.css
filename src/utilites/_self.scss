@@ -15,6 +15,6 @@ $align-self-values: (
 ) !default;
 
 
-@include generate-utility-css-value("self", $align-self-values) using ($value) {
-  align-self: $value;
+@include generate-utility-css("self", $align-self-values, null, $align-self-important) using ($value, $important_value) {
+  align-self: $value #{$important_value};
 }

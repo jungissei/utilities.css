@@ -4,27 +4,27 @@
 @use "../setting" as *;
 
 
-@include generate-utility-css-value("gap", $gap-px, "px") using ($value) {
-  gap: $value + px;
+@include generate-utility-css("gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
+  gap: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("gap", $gap-percent, "%") using ($value) {
-  gap: $value * 1%;
+@include generate-utility-css("gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
+  gap: $value * 1% #{$important_value};
 }
 
-@include generate-utility-css-value("col-gap", $gap-px, "px") using ($value) {
-  column-gap: $value + px;
+@include generate-utility-css("col-gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
+  column-gap: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("col-gap", $gap-percent, "%") using ($value) {
-  column-gap: $value * 1%;
+@include generate-utility-css("col-gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
+  column-gap: $value * 1% #{$important_value};
 }
 
-@include generate-utility-css-value("row-gap", $gap-px, "px") using ($value) {
-  row-gap: $value + px;
+@include generate-utility-css("row-gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
+  row-gap: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("row-gap", $gap-percent, "%") using ($value) {
-  row-gap: $value * 1%;
+@include generate-utility-css("row-gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
+  row-gap: $value * 1% #{$important_value};
 }
 

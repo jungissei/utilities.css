@@ -11,18 +11,18 @@ $basis-values: (
 ) !default;
 
 
-@include generate-utility-css-value("basis", $basis-values) using ($value) {
-  flex-basis: $value;
+@include generate-utility-css("basis", $basis-values, null, $basis-important) using ($value, $important_value) {
+  flex-basis: $value #{$important_value};
 }
 
-@include generate-utility-css-value("basis", $basis-px, "px") using ($value) {
-  flex-basis: $value + px;
+@include generate-utility-css("basis", $basis-px, "px", $basis-important) using ($value, $important_value) {
+  flex-basis: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("basis", $basis-percent, "%") using ($value) {
-  flex-basis: $value * 1%;
+@include generate-utility-css("basis", $basis-percent, "%", $basis-important) using ($value, $important_value) {
+  flex-basis: $value * 1% #{$important_value};
 }
 
-@include generate-utility-css-value("basis", $basis-em, "em") using ($value) {
-  flex-basis: $value + em;
+@include generate-utility-css("basis", $basis-em, "em", $basis-important) using ($value, $important_value) {
+  flex-basis: $value + em #{$important_value};
 }

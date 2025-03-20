@@ -16,6 +16,6 @@ $justify-content-values: (
   "normal": normal,
 ) !default;
 
-@include generate-utility-css-value("justify", $justify-content-values) using ($value) {
-  justify-content: $value;
+@include generate-utility-css("justify", $justify-content-values, null, $justify-content-important) using ($value, $important_value) {
+  justify-content: $value #{$important_value};
 }

@@ -7,18 +7,18 @@ $width-values: (
   "auto": auto
 ) !default;
 
-@include generate-utility-css-value("w", $width-values) using ($value) {
-  width: $value;
+@include generate-utility-css("w", $width-values, null, $width-important) using ($value, $important_value) {
+  width: $value #{$important_value};
 }
 
-@include generate-utility-css-value("w", $width-px, "px") using ($value) {
-  width: $value + px;
+@include generate-utility-css("w", $width-px, "px", $width-important) using ($value, $important_value) {
+  width: $value + px #{$important_value};
 }
 
-@include generate-utility-css-value("w", $width-percent, "%") using ($value) {
-  width: $value * 1%;
+@include generate-utility-css("w", $width-percent, "%", $width-important) using ($value, $important_value) {
+  width: $value * 1% #{$important_value};
 }
 
-@include generate-utility-css-value("w", $width-em, "em") using ($value) {
-  width: $value + em;
+@include generate-utility-css("w", $width-em, "em", $width-important) using ($value, $important_value) {
+  width: $value + em #{$important_value};
 }
