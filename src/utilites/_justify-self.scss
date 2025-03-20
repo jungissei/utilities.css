@@ -12,6 +12,6 @@ $justify-self-values: (
   "stretch": stretch,
 ) !default;
 
-@include generate-utility-classes("justify-self", $justify-self-values) using ($value) {
+@include generate-utility-css-value("justify-self", $justify-self-values) using ($value) {
   justify-self: $value;
 }

@@ -14,7 +14,7 @@ $display-values: (
   "none": none
 ) !default;
 
-@include generate-utility-classes("", $display-values) using ($value) {
+@include generate-utility-css-value("", $display-values) using ($value) {
   display: $value;
 }
 

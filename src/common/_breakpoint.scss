@@ -1,8 +1,45 @@
 @use "../setting" as *;
 
 
-// ブレイクポイント用のmixin
-@mixin generate-utility-classes($class-prefix, $values, $unit_suffix: null) {
+@mixin generate-utility-css(
+  $property,
+  $class-prefix,
+  $values,
+  $unit_suffix: null,
+  $important: false
+){
+
+  @include generate-utility-css-value(
+    $class-prefix,
+    $values,
+    $unit_suffix,
+    false
+  ) using ($value) {
+    #{$property}: $value;
+  }
+
+  @if $important{
+    @include generate-utility-css-value(
+      $class-prefix,
+      $values,
+      $unit_suffix,
+      true
+    ) using ($value) {
+      #{$property}: $value !important;
+    }
+  }
+}
+
+
+@mixin generate-utility-css-value(
+  $class-prefix,
+  $values,
+  $unit_suffix: null,
+  $important: false
+) {
+
+  $important_suffix: if($important, "-imp", "");
+
   // ブレイクポイントなしのベースクラス
   @each $name, $value in $values {
     $suffix: if($value == "auto", "", $unit_suffix);
@@ -10,7 +47,7 @@
     $class_suffix: if($suffix == "%", "pct", $suffix);
     $sep: if($class-prefix == "", "", "-");
 
-    .#{$class-prefix}#{$sep}#{$name}#{$class_suffix} {
+    .#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important_suffix} {
       @content($value);
     }
   }
@@ -24,7 +61,7 @@
         $class_suffix: if($suffix == "%", "pct", $suffix);
         $sep: if($class-prefix == "", "", "-");
 
-        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix} {
+        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important_suffix} {
           @content($value);
         }
       }

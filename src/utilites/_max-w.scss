@@ -3,10 +3,10 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
-@include generate-utility-classes("max-w", $max-width-px, "px") using ($value) {
+@include generate-utility-css-value("max-w", $max-width-px, "px") using ($value) {
   max-width: $value + px;
 }
 
-@include generate-utility-classes("max-w", $max-width-percent, "%") using ($value) {
+@include generate-utility-css-value("max-w", $max-width-percent, "%") using ($value) {
   max-width: $value * 1%;
 }

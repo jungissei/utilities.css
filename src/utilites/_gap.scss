@@ -4,27 +4,27 @@
 @use "../setting" as *;
 
 
-@include generate-utility-classes("gap", $gap-px, "px") using ($value) {
+@include generate-utility-css-value("gap", $gap-px, "px") using ($value) {
   gap: $value + px;
 }
 
-@include generate-utility-classes("gap", $gap-percent, "%") using ($value) {
+@include generate-utility-css-value("gap", $gap-percent, "%") using ($value) {
   gap: $value * 1%;
 }
 
-@include generate-utility-classes("col-gap", $gap-px, "px") using ($value) {
+@include generate-utility-css-value("col-gap", $gap-px, "px") using ($value) {
   column-gap: $value + px;
 }
 
-@include generate-utility-classes("col-gap", $gap-percent, "%") using ($value) {
+@include generate-utility-css-value("col-gap", $gap-percent, "%") using ($value) {
   column-gap: $value * 1%;
 }
 
-@include generate-utility-classes("row-gap", $gap-px, "px") using ($value) {
+@include generate-utility-css-value("row-gap", $gap-px, "px") using ($value) {
   row-gap: $value + px;
 }
 
-@include generate-utility-classes("row-gap", $gap-percent, "%") using ($value) {
+@include generate-utility-css-value("row-gap", $gap-percent, "%") using ($value) {
   row-gap: $value * 1%;
 }
 

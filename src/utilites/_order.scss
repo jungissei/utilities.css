@@ -4,6 +4,6 @@
 @use "../setting" as *;
 
 
-@include generate-utility-classes("order", $order-values) using ($value) {
+@include generate-utility-css-value("order", $order-values) using ($value) {
   order: $value;
 }

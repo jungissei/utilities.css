@@ -9,6 +9,6 @@ $flex-grow-values: (
   "1": 1
 ) !default;
 
-@include generate-utility-classes("grow", $flex-grow-values) using ($value) {
+@include generate-utility-css-value("grow", $flex-grow-values) using ($value) {
   flex-grow: $value;
 }

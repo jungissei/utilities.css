@@ -18,7 +18,7 @@ $directions: (
 // 各方向ごとにクラスを生成
 @each $direction-prefix, $direction-value in $directions {
   // px単位
-  @include generate-utility-classes("m#{$direction-prefix}", $margin-px, "px") using ($value) {
+  @include generate-utility-css-value("m#{$direction-prefix}", $margin-px, "px") using ($value) {
     @if $direction-value == "" {
       margin: if($value == "auto", auto, $value + px);
     } @else {
@@ -27,7 +27,7 @@ $directions: (
   }
 
   // %単位
-  @include generate-utility-classes("m#{$direction-prefix}", $margin-percent, "pct") using ($value) {
+  @include generate-utility-css-value("m#{$direction-prefix}", $margin-percent, "pct") using ($value) {
     @if $direction-value == "" {
       margin: if($value == "auto", auto, $value * 1%);
     } @else {

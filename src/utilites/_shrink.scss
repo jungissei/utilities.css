@@ -10,6 +10,6 @@ $flex-shrink-values: (
 ) !default;
 
 
-@include generate-utility-classes("shrink", $flex-shrink-values) using ($value) {
+@include generate-utility-css-value("shrink", $flex-shrink-values) using ($value) {
   flex-shrink: $value;
 }
