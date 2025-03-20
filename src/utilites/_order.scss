@@ -3,7 +3,9 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+@if $order-generate {
 
-@include generate-utility-css("order", $order-number, null, $order-important) using ($value, $important_value) {
-  order: $value #{$important_value};
+  @include generate-utility-css("order", $order-number, null, $order-important) using ($value, $important_value) {
+    order: $value #{$important_value};
+  }
 }

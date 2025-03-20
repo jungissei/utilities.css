@@ -4,18 +4,18 @@
 @use "../setting" as *;
 
 
+@if $display-generate {
 
-$display-values: (
-  "block": block,
-  "inline": inline,
-  "inline-block": inline-block,
-  "flex": flex,
-  "grid": grid,
-  "none": none
-) !default;
+  $display-values: (
+    "block": block,
+    "inline": inline,
+    "inline-block": inline-block,
+    "flex": flex,
+    "grid": grid,
+    "none": none
+  ) !default;
 
-@include generate-utility-css("", $display-values, null, $display-important) using ($value, $important_value) {
-  display: $value #{$important_value};
+  @include generate-utility-css("", $display-values, null, $display-important) using ($value, $important_value) {
+    display: $value #{$important_value};
+  }
 }
-
-

@@ -1,5 +1,8 @@
 @use "./common/_functions" as *;
 
+// ----------------------------------------------------------------------------
+// ブレイクポイント設定
+// ----------------------------------------------------------------------------
 // --------------------------------------
 // @see src/common/_breakpoint.scss
 // --------------------------------------
@@ -9,196 +12,158 @@ $breakpoints: (
 ) !default;
 
 
+// ----------------------------------------------------------------------------
+// 各プロパティ設定
+// ----------------------------------------------------------------------------
 // --------------------------------------
 // @see src/utilites/_display.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$display-important: true;
+$display-generate:  true; // クラスを生成するかどうか
+$display-important: true; // !importantをつけるかどうか
 
 
 // --------------------------------------
-// @see src/utilites/_font-size.scss
+// @see src/utilites/_fs.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$font-size-important: false;
+$font-size-generate:  true;  // クラスを生成するかどうか
+$font-size-important: false; // !importantをつけるかどうか
 
-// px単位
-$font-sizes-px: generate-range(10, 30);
-// em単位
-$font-sizes-em: generate-range(1, 10);
+$font-sizes-px:generate-range(10, 30); // px単位
+$font-sizes-em:generate-range(1,  10); // em単位
 
 
 // --------------------------------------
 // @see src/utilites/_text-align.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$text-align-important: false;
+$text-align-generate: true; // クラスを生成するかどうか
+$text-align-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
-// @see src/utilites/_height.scss
+// @see src/utilites/_w.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$height-important: false;
+$width-generate: true;   // クラスを生成するかどうか
+$width-important: false; // !importantをつけるかどうか
 
-// px単位
-$height-px: generate-range(1, 500);
-
-// --------------------------------------
-// @see src/utilites/_width.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$width-important: false;
-
-// px単位
-$width-px: generate-range(1, 200);
-
-// %単位
-$width-percent: generate-range(1, 100);
-
-// em単位
-$width-em: generate-range(1, 10);
-
-// --------------------------------------
-// @see src/utilites/_basis.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$basis-important: false;
-
-// px単位
-$basis-px: generate-range(1, 200);
-
-// %単位
-$basis-percent: generate-range(1, 100);
-
-// em単位
-$basis-em: generate-range(1, 10);
+$width-px: generate-range(1, 200);      // px単位
+$width-percent: generate-range(1, 100); // %単位
+$width-em: generate-range(1, 10);       // em単位
 
 
 // --------------------------------------
-// @see src/utilites/_grow.scss
+// @see src/utilites/_max-w.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$flex-grow-important: false;
+$max-width-generate: true;   // クラスを生成するかどうか
+$max-width-important: false; // !importantをつけるかどうか
 
-
-// --------------------------------------
-// @see src/utilites/_shrink.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$flex-shrink-important: false;
-
+$max-width-px: generate-range(1, 200);      // px単位
+$max-width-percent: generate-range(1, 100); // %単位
 
 
 // --------------------------------------
-// @see src/utilites/_flex-wrap.scss
+// @see src/utilites/_min-w.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$flex-wrap-important: false;
+$min-width-generate: true; // クラスを生成するかどうか
+$min-width-important: false; // !importantをつけるかどうか
 
-
-// --------------------------------------
-// @see src/utilites/_items.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$align-items-important: false;
+$min-width-px: generate-range(1, 200);      // px単位
+$min-width-percent: generate-range(1, 100); // %単位
 
 
 // --------------------------------------
-// @see src/utilites/_self.scss
+// @see src/utilites/_m.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$align-self-important: false;
+$margin-generate: true;   // クラスを生成するかどうか
+$margin-important: false; // !importantをつけるかどうか
 
-
-
-
-
-
-// --------------------------------------
-// @see src/utilites/_max-width.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$max-width-important: false;
-
-// px単位
-$max-width-px: generate-range(1, 200);
-
-// %単位
-$max-width-percent: generate-range(1, 100);
-
-// --------------------------------------
-// @see src/utilites/_min-width.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$min-width-important: false;
-
-// px単位
-$min-width-px: generate-range(1, 200);
-
-// %単位
-$min-width-percent: generate-range(1, 100);
+$margin-px: generate-range(-100, 100, false);   // px単位
+$margin-percent: generate-range(0, 100, false); // %単位
 
 
 // --------------------------------------
-// @see src/utilites/_margin.scss
+// @see src/utilites/_p.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$margin-important: false;
+$padding-generate: true;   // クラスを生成するかどうか
+$padding-important: false; // !importantをつけるかどうか
 
-// px単位
-$margin-px: generate-range(-100, 100, false);
-
-// %単位
-$margin-percent: generate-range(0, 100, false);
-
-
-// --------------------------------------
-// @see src/utilites/_padding.scss
-// --------------------------------------
-// !importantをつけるかどうか
-$padding-important: false;
-
-// px単位
-$padding-px: generate-range(0, 100, false);
-
-// %単位
-$padding-percent: generate-range(0, 100, false);
-
+$padding-px: generate-range(0, 100, false);      // px単位
+$padding-percent: generate-range(0, 100, false); // %単位
 
 
 // --------------------------------------
 // @see src/utilites/_gap.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$gap-important: false;
+$gap-generate: true;   // クラスを生成するかどうか
+$gap-important: false; // !importantをつけるかどうか
 
-// px単位
-$gap-px: generate-range(0, 100);
+$gap-px: generate-range(0, 100);      // px単位
+$gap-percent: generate-range(0, 100); // %単位
 
-// %単位
-$gap-percent: generate-range(0, 100);
+
+// --------------------------------------
+// @see src/utilites/_basis.scss
+// --------------------------------------
+$basis-generate: true; // クラスを生成するかどうか
+$basis-important: false; // !importantをつけるかどうか
+
+$basis-px: generate-range(1, 200);      // px単位
+$basis-percent: generate-range(1, 100); // %単位
+$basis-em: generate-range(1, 10);       // em単位
+
+
+// --------------------------------------
+// @see src/utilites/_grow.scss
+// --------------------------------------
+$flex-grow-generate: true;   // クラスを生成するかどうか
+$flex-grow-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
+// @see src/utilites/_shrink.scss
+// --------------------------------------
+$flex-shrink-generate: true;   // クラスを生成するかどうか
+$flex-shrink-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
+// @see src/utilites/_flex-wrap.scss
+// --------------------------------------
+$flex-wrap-generate: true;   // クラスを生成するかどうか
+$flex-wrap-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
+// @see src/utilites/_items.scss
+// --------------------------------------
+$align-items-generate: true;   // クラスを生成するかどうか
+$align-items-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
+// @see src/utilites/_self.scss
+// --------------------------------------
+$align-self-generate: true;   // クラスを生成するかどうか
+$align-self-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
 // @see src/utilites/_order.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$order-important: false;
+$order-generate: true;   // クラスを生成するかどうか
+$order-important: false; // !importantをつけるかどうか
 
-// 数値
-$order-number: generate-range(0, 10);
+$order-number: generate-range(0, 10); // 数値
 
 
 // --------------------------------------
 // @see src/utilites/_justify-content.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$justify-content-important: false;
+$justify-content-generate: true;   // クラスを生成するかどうか
+$justify-content-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
 // @see src/utilites/_justify-self.scss
 // --------------------------------------
-// !importantをつけるかどうか
-$justify-self-important: false;
+$justify-self-generate: true;   // クラスを生成するかどうか
+$justify-self-important: false; // !importantをつけるかどうか

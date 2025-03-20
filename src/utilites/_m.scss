@@ -4,34 +4,37 @@
 @use "../setting" as *;
 
 
-// 方向の定義
-$directions: (
-  "": "", // 全方向
-  "t": "-top",
-  "r": "-right",
-  "b": "-bottom",
-  "l": "-left",
-  "block": "-block",
-  "inline": "-inline"
-);
+@if $margin-generate {
 
-// 各方向ごとにクラスを生成
-@each $direction-prefix, $direction-value in $directions {
-  // px単位
-  @include generate-utility-css("m#{$direction-prefix}", $margin-px, "px", $margin-important) using ($value, $important_value) {
-    @if $direction-value == "" {
-      margin: if($value == "auto", auto, $value + px) #{$important_value};
-    } @else {
-      margin#{$direction-value}: if($value == "auto", auto, $value + px) #{$important_value};
+  // 方向の定義
+  $directions: (
+    "": "", // 全方向
+    "t": "-top",
+    "r": "-right",
+    "b": "-bottom",
+    "l": "-left",
+    "block": "-block",
+    "inline": "-inline"
+  );
+
+  // 各方向ごとにクラスを生成
+  @each $direction-prefix, $direction-value in $directions {
+    // px単位
+    @include generate-utility-css("m#{$direction-prefix}", $margin-px, "px", $margin-important) using ($value, $important_value) {
+      @if $direction-value == "" {
+        margin: if($value == "auto", auto, $value + px) #{$important_value};
+      } @else {
+        margin#{$direction-value}: if($value == "auto", auto, $value + px) #{$important_value};
+      }
     }
-  }
 
-  // %単位
-  @include generate-utility-css("m#{$direction-prefix}", $margin-percent, "pct", $margin-important) using ($value, $important_value) {
-    @if $direction-value == "" {
-      margin: if($value == "auto", auto, $value * 1%) #{$important_value};
-    } @else {
-      margin#{$direction-value}: if($value == "auto", auto, $value * 1%) #{$important_value};
+    // %単位
+    @include generate-utility-css("m#{$direction-prefix}", $margin-percent, "pct", $margin-important) using ($value, $important_value) {
+      @if $direction-value == "" {
+        margin: if($value == "auto", auto, $value * 1%) #{$important_value};
+      } @else {
+        margin#{$direction-value}: if($value == "auto", auto, $value * 1%) #{$important_value};
+      }
     }
   }
 }

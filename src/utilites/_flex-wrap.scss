@@ -4,13 +4,15 @@
 @use "../setting" as *;
 
 
-$flex-wrap-values: (
-  "nowrap": nowrap,
-  "wrap": wrap,
-  "wrap-reverse": wrap-reverse
-) !default;
+@if $flex-wrap-generate {
 
+  $flex-wrap-values: (
+    "nowrap": nowrap,
+    "wrap": wrap,
+    "wrap-reverse": wrap-reverse
+  ) !default;
 
-@include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important_value) {
-  flex-wrap: $value #{$important_value};
+  @include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important_value) {
+    flex-wrap: $value #{$important_value};
+  }
 }

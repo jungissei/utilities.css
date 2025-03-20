@@ -4,18 +4,21 @@
 @use "../setting" as *;
 
 
-$justify-content-values: (
-  "start": flex-start,
-  "end": flex-end,
-  "center": center,
-  "between": space-between,
-  "around": space-around,
-  "evenly": space-evenly,
-  "stretch": stretch,
-  "baseline": baseline,
-  "normal": normal,
-) !default;
+@if $justify-content-generate {
 
-@include generate-utility-css("justify", $justify-content-values, null, $justify-content-important) using ($value, $important_value) {
-  justify-content: $value #{$important_value};
+  $justify-content-values: (
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "between": space-between,
+    "around": space-around,
+    "evenly": space-evenly,
+    "stretch": stretch,
+    "baseline": baseline,
+    "normal": normal,
+  ) !default;
+
+  @include generate-utility-css("justify", $justify-content-values, null, $justify-content-important) using ($value, $important_value) {
+    justify-content: $value #{$important_value};
+  }
 }

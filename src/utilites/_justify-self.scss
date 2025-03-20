@@ -3,15 +3,17 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+@if $justify-self-generate {
 
-$justify-self-values: (
-  "auto": auto,
-  "start": start,
-  "end": end,
-  "center": center,
-  "stretch": stretch,
-) !default;
+  $justify-self-values: (
+    "auto": auto,
+    "start": start,
+    "end": end,
+    "center": center,
+    "stretch": stretch,
+  ) !default;
 
-@include generate-utility-css("justify-self", $justify-self-values, null, $justify-self-important) using ($value, $important_value) {
-  justify-self: $value #{$important_value};
+  @include generate-utility-css("justify-self", $justify-self-values, null, $justify-self-important) using ($value, $important_value) {
+    justify-self: $value #{$important_value};
+  }
 }

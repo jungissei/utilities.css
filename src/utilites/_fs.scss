@@ -3,11 +3,12 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+@if $font-size-generate {
+  @include generate-utility-css("fs", $font-sizes-px, "px", $font-size-important) using ($value, $important_value) {
+    font-size: $value + px #{$important_value};
+  }
 
-@include generate-utility-css("fs", $font-sizes-px, "px", $font-size-important) using ($value, $important_value) {
-  font-size: $value + px #{$important_value};
-}
-
-@include generate-utility-css("fs", $font-sizes-em, "em", $font-size-important) using ($value, $important_value) {
-  font-size: $value + em #{$important_value};
+  @include generate-utility-css("fs", $font-sizes-em, "em", $font-size-important) using ($value, $important_value) {
+    font-size: $value + em #{$important_value};
+  }
 }

@@ -3,16 +3,17 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+@if $align-items-generate {
 
-$align-items-values: (
-  "start": flex-start,
-  "end": flex-end,
-  "center": center,
-  "baseline": baseline,
-  "stretch": stretch
-) !default;
+  $align-items-values: (
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "baseline": baseline,
+    "stretch": stretch
+  ) !default;
 
-
-@include generate-utility-css("items", $align-items-values, null, $align-items-important) using ($value, $important_value) {
-  align-items: $value #{$important_value};
+  @include generate-utility-css("items", $align-items-values, null, $align-items-important) using ($value, $important_value) {
+    align-items: $value #{$important_value};
+  }
 }

@@ -3,22 +3,25 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
-$width-values: (
-  "auto": auto
-) !default;
+@if $width-generate {
 
-@include generate-utility-css("w", $width-values, null, $width-important) using ($value, $important_value) {
-  width: $value #{$important_value};
-}
+  $width-values: (
+    "auto": auto
+  ) !default;
 
-@include generate-utility-css("w", $width-px, "px", $width-important) using ($value, $important_value) {
-  width: $value + px #{$important_value};
-}
+  @include generate-utility-css("w", $width-values, null, $width-important) using ($value, $important_value) {
+    width: $value #{$important_value};
+  }
 
-@include generate-utility-css("w", $width-percent, "%", $width-important) using ($value, $important_value) {
-  width: $value * 1% #{$important_value};
-}
+  @include generate-utility-css("w", $width-px, "px", $width-important) using ($value, $important_value) {
+    width: $value + px #{$important_value};
+  }
 
-@include generate-utility-css("w", $width-em, "em", $width-important) using ($value, $important_value) {
-  width: $value + em #{$important_value};
+  @include generate-utility-css("w", $width-percent, "%", $width-important) using ($value, $important_value) {
+    width: $value * 1% #{$important_value};
+  }
+
+  @include generate-utility-css("w", $width-em, "em", $width-important) using ($value, $important_value) {
+    width: $value + em #{$important_value};
+  }
 }

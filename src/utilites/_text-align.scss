@@ -3,14 +3,15 @@
 @use "../common/_functions" as *;
 @use "../setting" as *;
 
+@if $text-align-generate {
+  $text-align-values: (
+    "left": left,
+    "center": center,
+    "right": right,
+    "justify": justify
+  ) !default;
 
-$text-align-values: (
-  "left": left,
-  "center": center,
-  "right": right,
-  "justify": justify
-) !default;
-
-@include generate-utility-css("text-align", $text-align-values, null, $text-align-important) using ($value, $important_value) {
-  text-align: $value #{$important_value};
+  @include generate-utility-css("text-align", $text-align-values, null, $text-align-important) using ($value, $important_value) {
+    text-align: $value #{$important_value};
+  }
 }
