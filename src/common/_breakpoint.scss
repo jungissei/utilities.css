@@ -1,7 +1,5 @@
-$breakpoints: (
-  "pc": "print, screen and (min-width: 768px)",
-  "sp": "screen and (max-width: 767px)",
-) !default;
+@use "../setting" as *;
+
 
 // ブレイクポイント用のmixin
 @mixin generate-utility-classes($class-prefix, $values, $unit_suffix: null) {

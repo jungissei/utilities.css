@@ -1,6 +1,15 @@
 @use "./common/_functions" as *;
 
 // --------------------------------------
+// @see src/common/_breakpoint.scss
+// --------------------------------------
+$breakpoints: (
+  "pc": "print, screen and (min-width: 768px)",
+  "sp": "screen and (max-width: 767px)",
+) !default;
+
+
+// --------------------------------------
 // @see src/utilites/_font-size.scss
 // --------------------------------------
 // px単位
