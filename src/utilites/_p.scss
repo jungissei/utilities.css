@@ -18,20 +18,31 @@
 
   // 各方向ごとにクラスを生成
   @each $direction-prefix, $direction-value in $directions {
-    // px単位
+    // 0の場合の処理（単位なし）
+    @if map.has-key($padding-px, "0") or map.has-key($padding-percent, "0") {
+      @include generate-utility-css("p#{$direction-prefix}", (0), "", $padding-important) using ($value, $important_value) {
+        @if $direction-value == "" {
+          padding: 0 #{$important_value};
+        } @else {
+          padding#{$direction-value}: 0 #{$important_value};
+        }
+      }
+    }
+
+    // px単位（0以外）
     @include generate-utility-css("p#{$direction-prefix}", $padding-px, "px", $padding-important) using ($value, $important_value) {
-      @if $direction-value == "" {
+      @if $value != 0 and $direction-value == "" {
         padding: $value + px #{$important_value};
-      } @else {
+      } @else if $value != 0 {
         padding#{$direction-value}: $value + px #{$important_value};
       }
     }
 
-    // %単位
+    // %単位（0以外）
     @include generate-utility-css("p#{$direction-prefix}", $padding-percent, "pct", $padding-important) using ($value, $important_value) {
-      @if $direction-value == "" {
+      @if $value != 0 and $direction-value == "" {
         padding: $value * 1% #{$important_value};
-      } @else {
+      } @else if $value != 0 {
         padding#{$direction-value}: $value * 1% #{$important_value};
       }
     }

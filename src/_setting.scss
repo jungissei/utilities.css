@@ -58,7 +58,7 @@ $text-align-important: false; // !importantをつけるかどうか
 $width-generate: true;   // クラスを生成するかどうか
 $width-important: false; // !importantをつけるかどうか
 
-$width-px: generate-range(1, 200);      // px単位
+$width-px: generate-range(0, 200);      // px単位
 $width-percent: generate-range(1, 100); // %単位
 $width-em: generate-range(1, 20);       // em単位
 
@@ -90,7 +90,7 @@ $margin-generate: true;   // クラスを生成するかどうか
 $margin-important: false; // !importantをつけるかどうか
 
 $margin-px: generate-range(-100, 100, false);   // px単位
-$margin-percent: generate-range(0, 100, false); // %単位
+$margin-percent: generate-range(1, 1, false); // %単位
 
 
 // --------------------------------------
@@ -100,7 +100,7 @@ $padding-generate: true;   // クラスを生成するかどうか
 $padding-important: false; // !importantをつけるかどうか
 
 $padding-px: generate-range(0, 100, false);      // px単位
-$padding-percent: generate-range(0, 100, false); // %単位
+$padding-percent: generate-range(1, 100, false); // %単位
 
 
 // --------------------------------------
@@ -110,7 +110,7 @@ $gap-generate: true;   // クラスを生成するかどうか
 $gap-important: false; // !importantをつけるかどうか
 
 $gap-px: generate-range(0, 30);      // px単位
-$gap-percent: generate-range(0, 20); // %単位
+$gap-percent: generate-range(1, 20); // %単位
 
 
 // --------------------------------------
