@@ -41,10 +41,10 @@
     $suffix: if($value == "auto", "", $unit-suffix);
 
     // クラス名に単位を付ける（%の場合はpctに変換）
-    $class_suffix: if($suffix == "%", "pct", $suffix);
+    $class-suffix: if($suffix == "%", "pct", $suffix);
     $sep: if($class-prefix == "", "", "-");
 
-    .#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important-suffix} {
+    .#{$class-prefix}#{$sep}#{$name}#{$class-suffix}#{$important-suffix} {
       @content($value, $important-value);
     }
   }
@@ -56,10 +56,10 @@
         $suffix: if($value == "auto", "", $unit-suffix);
 
         // クラス名に単位を付ける（%の場合はpctに変換）
-        $class_suffix: if($suffix == "%", "pct", $suffix);
+        $class-suffix: if($suffix == "%", "pct", $suffix);
         $sep: if($class-prefix == "", "", "-");
 
-        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important-suffix} {
+        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class-suffix}#{$important-suffix} {
           @content($value, $important-value);
         }
       }
