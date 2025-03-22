@@ -22,7 +22,7 @@
   display: none;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-block {
     display: block;
   }
@@ -42,7 +42,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-block {
     display: block;
   }
@@ -146,7 +146,7 @@
   font-size: 30px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-fs-10px {
     font-size: 10px;
   }
@@ -211,7 +211,7 @@
     font-size: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-fs-10px {
     font-size: 10px;
   }
@@ -316,7 +316,7 @@
   font-size: 10em;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-fs-1em {
     font-size: 1em;
   }
@@ -348,7 +348,7 @@
     font-size: 10em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-fs-1em {
     font-size: 1em;
   }
@@ -396,7 +396,7 @@
   text-align: justify;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-text-align-left {
     text-align: left;
   }
@@ -410,7 +410,7 @@
     text-align: justify;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-text-align-left {
     text-align: left;
   }
@@ -428,12 +428,12 @@
   width: auto;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-w-auto {
     width: auto;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-w-auto {
     width: auto;
   }
@@ -1238,7 +1238,7 @@
   width: 200px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-w-1px {
     width: 1px;
   }
@@ -1840,7 +1840,7 @@
     width: 200px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-w-1px {
     width: 1px;
   }
@@ -2842,7 +2842,7 @@
   width: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-w-1pct {
     width: 1%;
   }
@@ -3144,7 +3144,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-w-1pct {
     width: 1%;
   }
@@ -3526,7 +3526,7 @@
   width: 20em;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-w-1em {
     width: 1em;
   }
@@ -3588,7 +3588,7 @@
     width: 20em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-w-1em {
     width: 1em;
   }
@@ -4454,7 +4454,7 @@
   margin: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-m-n100px {
     margin: -100px;
   }
@@ -5059,7 +5059,7 @@
     margin: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-m-n100px {
     margin: -100px;
   }
@@ -6068,7 +6068,7 @@
   margin: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-m-0pct {
     margin: 0%;
   }
@@ -6373,7 +6373,7 @@
     margin: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-m-0pct {
     margin: 0%;
   }
@@ -7482,7 +7482,7 @@
   margin-top: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mt-n100px {
     margin-top: -100px;
   }
@@ -8087,7 +8087,7 @@
     margin-top: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mt-n100px {
     margin-top: -100px;
   }
@@ -9096,7 +9096,7 @@
   margin-top: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mt-0pct {
     margin-top: 0%;
   }
@@ -9401,7 +9401,7 @@
     margin-top: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mt-0pct {
     margin-top: 0%;
   }
@@ -10510,7 +10510,7 @@
   margin-right: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mr-n100px {
     margin-right: -100px;
   }
@@ -11115,7 +11115,7 @@
     margin-right: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mr-n100px {
     margin-right: -100px;
   }
@@ -12124,7 +12124,7 @@
   margin-right: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mr-0pct {
     margin-right: 0%;
   }
@@ -12429,7 +12429,7 @@
     margin-right: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mr-0pct {
     margin-right: 0%;
   }
@@ -13538,7 +13538,7 @@
   margin-bottom: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mb-n100px {
     margin-bottom: -100px;
   }
@@ -14143,7 +14143,7 @@
     margin-bottom: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mb-n100px {
     margin-bottom: -100px;
   }
@@ -15152,7 +15152,7 @@
   margin-bottom: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mb-0pct {
     margin-bottom: 0%;
   }
@@ -15457,7 +15457,7 @@
     margin-bottom: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mb-0pct {
     margin-bottom: 0%;
   }
@@ -16566,7 +16566,7 @@
   margin-left: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-ml-n100px {
     margin-left: -100px;
   }
@@ -17171,7 +17171,7 @@
     margin-left: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-ml-n100px {
     margin-left: -100px;
   }
@@ -18180,7 +18180,7 @@
   margin-left: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-ml-0pct {
     margin-left: 0%;
   }
@@ -18485,7 +18485,7 @@
     margin-left: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-ml-0pct {
     margin-left: 0%;
   }
@@ -19594,7 +19594,7 @@
   margin-block: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mblock-n100px {
     margin-block: -100px;
   }
@@ -20199,7 +20199,7 @@
     margin-block: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mblock-n100px {
     margin-block: -100px;
   }
@@ -21208,7 +21208,7 @@
   margin-block: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-mblock-0pct {
     margin-block: 0%;
   }
@@ -21513,7 +21513,7 @@
     margin-block: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-mblock-0pct {
     margin-block: 0%;
   }
@@ -22622,7 +22622,7 @@
   margin-inline: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-minline-n100px {
     margin-inline: -100px;
   }
@@ -23227,7 +23227,7 @@
     margin-inline: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-minline-n100px {
     margin-inline: -100px;
   }
@@ -24236,7 +24236,7 @@
   margin-inline: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-minline-0pct {
     margin-inline: 0%;
   }
@@ -24541,7 +24541,7 @@
     margin-inline: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-minline-0pct {
     margin-inline: 0%;
   }
@@ -25250,7 +25250,7 @@
   padding: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-p-0px {
     padding: 0px;
   }
@@ -25555,7 +25555,7 @@
     padding: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-p-0px {
     padding: 0px;
   }
@@ -26264,7 +26264,7 @@
   padding: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-p-0pct {
     padding: 0%;
   }
@@ -26569,7 +26569,7 @@
     padding: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-p-0pct {
     padding: 0%;
   }
@@ -27278,7 +27278,7 @@
   padding-top: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pt-0px {
     padding-top: 0px;
   }
@@ -27583,7 +27583,7 @@
     padding-top: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pt-0px {
     padding-top: 0px;
   }
@@ -28292,7 +28292,7 @@
   padding-top: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pt-0pct {
     padding-top: 0%;
   }
@@ -28597,7 +28597,7 @@
     padding-top: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pt-0pct {
     padding-top: 0%;
   }
@@ -29306,7 +29306,7 @@
   padding-right: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pr-0px {
     padding-right: 0px;
   }
@@ -29611,7 +29611,7 @@
     padding-right: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pr-0px {
     padding-right: 0px;
   }
@@ -30320,7 +30320,7 @@
   padding-right: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pr-0pct {
     padding-right: 0%;
   }
@@ -30625,7 +30625,7 @@
     padding-right: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pr-0pct {
     padding-right: 0%;
   }
@@ -31334,7 +31334,7 @@
   padding-bottom: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pb-0px {
     padding-bottom: 0px;
   }
@@ -31639,7 +31639,7 @@
     padding-bottom: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pb-0px {
     padding-bottom: 0px;
   }
@@ -32348,7 +32348,7 @@
   padding-bottom: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pb-0pct {
     padding-bottom: 0%;
   }
@@ -32653,7 +32653,7 @@
     padding-bottom: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pb-0pct {
     padding-bottom: 0%;
   }
@@ -33362,7 +33362,7 @@
   padding-left: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pl-0px {
     padding-left: 0px;
   }
@@ -33667,7 +33667,7 @@
     padding-left: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pl-0px {
     padding-left: 0px;
   }
@@ -34376,7 +34376,7 @@
   padding-left: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pl-0pct {
     padding-left: 0%;
   }
@@ -34681,7 +34681,7 @@
     padding-left: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pl-0pct {
     padding-left: 0%;
   }
@@ -35390,7 +35390,7 @@
   padding-block: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pblock-0px {
     padding-block: 0px;
   }
@@ -35695,7 +35695,7 @@
     padding-block: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pblock-0px {
     padding-block: 0px;
   }
@@ -36404,7 +36404,7 @@
   padding-block: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pblock-0pct {
     padding-block: 0%;
   }
@@ -36709,7 +36709,7 @@
     padding-block: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pblock-0pct {
     padding-block: 0%;
   }
@@ -37418,7 +37418,7 @@
   padding-inline: 100px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pinline-0px {
     padding-inline: 0px;
   }
@@ -37723,7 +37723,7 @@
     padding-inline: 100px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pinline-0px {
     padding-inline: 0px;
   }
@@ -38432,7 +38432,7 @@
   padding-inline: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-pinline-0pct {
     padding-inline: 0%;
   }
@@ -38737,7 +38737,7 @@
     padding-inline: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-pinline-0pct {
     padding-inline: 0%;
   }
@@ -39166,7 +39166,7 @@
   gap: 30px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-gap-0px {
     gap: 0px;
   }
@@ -39261,7 +39261,7 @@
     gap: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-gap-0px {
     gap: 0px;
   }
@@ -39440,7 +39440,7 @@
   gap: 20%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-gap-0pct {
     gap: 0%;
   }
@@ -39505,7 +39505,7 @@
     gap: 20%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-gap-0pct {
     gap: 0%;
   }
@@ -39725,7 +39725,7 @@
        column-gap: 30px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-col-gap-0px {
     -moz-column-gap: 0px;
          column-gap: 0px;
@@ -39851,7 +39851,7 @@
          column-gap: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-col-gap-0px {
     -moz-column-gap: 0px;
          column-gap: 0px;
@@ -40082,7 +40082,7 @@
        column-gap: 20%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-col-gap-0pct {
     -moz-column-gap: 0%;
          column-gap: 0%;
@@ -40168,7 +40168,7 @@
          column-gap: 20%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-col-gap-0pct {
     -moz-column-gap: 0%;
          column-gap: 0%;
@@ -40378,7 +40378,7 @@
   row-gap: 30px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-row-gap-0px {
     row-gap: 0px;
   }
@@ -40473,7 +40473,7 @@
     row-gap: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-row-gap-0px {
     row-gap: 0px;
   }
@@ -40652,7 +40652,7 @@
   row-gap: 20%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-row-gap-0pct {
     row-gap: 0%;
   }
@@ -40717,7 +40717,7 @@
     row-gap: 20%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-row-gap-0pct {
     row-gap: 0%;
   }
@@ -40790,7 +40790,7 @@
   flex-basis: 0;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-basis-auto {
     flex-basis: auto;
   }
@@ -40798,7 +40798,7 @@
     flex-basis: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-basis-auto {
     flex-basis: auto;
   }
@@ -41606,7 +41606,7 @@
   flex-basis: 200px;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-basis-1px {
     flex-basis: 1px;
   }
@@ -42208,7 +42208,7 @@
     flex-basis: 200px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-basis-1px {
     flex-basis: 1px;
   }
@@ -43210,7 +43210,7 @@
   flex-basis: 100%;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-basis-1pct {
     flex-basis: 1%;
   }
@@ -43512,7 +43512,7 @@
     flex-basis: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-basis-1pct {
     flex-basis: 1%;
   }
@@ -43854,7 +43854,7 @@
   flex-basis: 10em;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-basis-1em {
     flex-basis: 1em;
   }
@@ -43886,7 +43886,7 @@
     flex-basis: 10em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-basis-1em {
     flex-basis: 1em;
   }
@@ -43926,7 +43926,7 @@
   flex-grow: 1;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-grow-0 {
     flex-grow: 0;
   }
@@ -43934,7 +43934,7 @@
     flex-grow: 1;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-grow-0 {
     flex-grow: 0;
   }
@@ -43950,7 +43950,7 @@
   flex-shrink: 1;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-shrink-0 {
     flex-shrink: 0;
   }
@@ -43958,7 +43958,7 @@
     flex-shrink: 1;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-shrink-0 {
     flex-shrink: 0;
   }
@@ -43978,7 +43978,7 @@
   flex-wrap: wrap-reverse;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-flex-wrap-nowrap {
     flex-wrap: nowrap;
   }
@@ -43989,7 +43989,7 @@
     flex-wrap: wrap-reverse;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-flex-wrap-nowrap {
     flex-wrap: nowrap;
   }
@@ -44020,7 +44020,7 @@
   align-items: stretch;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-items-start {
     align-items: flex-start;
   }
@@ -44037,7 +44037,7 @@
     align-items: stretch;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-items-start {
     align-items: flex-start;
   }
@@ -44078,7 +44078,7 @@
   align-self: auto;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-self-start {
     align-self: flex-start;
   }
@@ -44098,7 +44098,7 @@
     align-self: auto;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-self-start {
     align-self: flex-start;
   }
@@ -44162,7 +44162,7 @@
   order: 10;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-order-0 {
     order: 0;
   }
@@ -44197,7 +44197,7 @@
     order: 10;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-order-0 {
     order: 0;
   }
@@ -44268,7 +44268,7 @@
   justify-content: normal;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-justify-start {
     justify-content: flex-start;
   }
@@ -44297,7 +44297,7 @@
     justify-content: normal;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-justify-start {
     justify-content: flex-start;
   }
@@ -44346,7 +44346,7 @@
   justify-self: stretch;
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (width >= 768px) {
   .pc-justify-self-auto {
     justify-self: auto;
   }
@@ -44363,7 +44363,7 @@
     justify-self: stretch;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .sp-justify-self-auto {
     justify-self: auto;
   }
