@@ -19,7 +19,11 @@ gulp.task('lint-scss', async function() {
     if (stdout) console.log(stdout);
     if (stderr) console.error(stderr);
   } catch (error) {
-    console.error('\x1b[31mStylelint found issues:\x1b[0m', error.stdout);
+    // エラーの詳細情報を表示
+    console.error('\x1b[31mStylelint found issues:\x1b[0m');
+    if (error.message) console.error(error.message);
+    if (error.stderr) console.error(error.stderr);
+    if (error.stdout) console.error(error.stdout);
     // エラーがあった場合でもタスクを継続
   }
 });
