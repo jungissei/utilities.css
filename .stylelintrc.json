@@ -3,6 +3,7 @@
   "rules": {
     "no-duplicate-selectors": true,
     "scss/at-rule-no-unknown": true,
-    "no-invalid-position-at-import-rule": null
+    "no-invalid-position-at-import-rule": null,
+    "property-no-vendor-prefix": null
   }
 }
