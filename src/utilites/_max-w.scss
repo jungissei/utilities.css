@@ -1,27 +1,27 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $max-width-generate {
   // 0の場合の処理（単位なし）
   @if map.has-key($max-width-px, "0") or map.has-key($max-width-percent, "0") {
-    @include generate-utility-css("max-w", (0), "", $max-width-important) using ($value, $important_value) {
-      max-width: 0 #{$important_value};
+    @include generate-utility-css("max-w", (0), "", $max-width-important) using ($value, $important-value) {
+      max-width: 0 #{$important-value};
     }
   }
 
   // px単位（0以外）
-  @include generate-utility-css("max-w", $max-width-px, "px", $max-width-important) using ($value, $important_value) {
+  @include generate-utility-css("max-w", $max-width-px, "px", $max-width-important) using ($value, $important-value) {
     @if $value != 0 {
-      max-width: $value + px #{$important_value};
+      max-width: $value + px #{$important-value};
     }
   }
 
   // %単位（0以外）
-  @include generate-utility-css("max-w", $max-width-percent, "%", $max-width-important) using ($value, $important_value) {
+  @include generate-utility-css("max-w", $max-width-percent, "%", $max-width-important) using ($value, $important-value) {
     @if $value != 0 {
-      max-width: $value * 1% #{$important_value};
+      max-width: $value * 1% #{$important-value};
     }
   }
 }

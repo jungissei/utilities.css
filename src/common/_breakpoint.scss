@@ -4,22 +4,22 @@
 @mixin generate-utility-css(
   $class-prefix,
   $values,
-  $unit_suffix: null,
-  $enable_important: false
+  $unit-suffix: null,
+  $enable-important: false
 ) {
   // --------------------------------------
   // !importantなし
   // --------------------------------------
-  @include generate-utility-css-value($class-prefix, $values, $unit_suffix, false) using ($value, $important_value) {
-    @content($value, $important_value);
+  @include generate-utility-css-value($class-prefix, $values, $unit-suffix, false) using ($value, $important-value) {
+    @content($value, $important-value);
   }
 
   // --------------------------------------
   // !importantあり
   // --------------------------------------
-  @if $enable_important {
-    @include generate-utility-css-value($class-prefix, $values, $unit_suffix, true) using ($value, $important_value) {
-      @content($value, $important_value);
+  @if $enable-important {
+    @include generate-utility-css-value($class-prefix, $values, $unit-suffix, true) using ($value, $important-value) {
+      @content($value, $important-value);
     }
   }
 
@@ -30,22 +30,22 @@
 @mixin generate-utility-css-value(
   $class-prefix,
   $values,
-  $unit_suffix: null,
-  $enable_important: false
+  $unit-suffix: null,
+  $enable-important: false
 ){
-  $important_suffix: if($enable_important, "-imp", "");
-  $important_value: if($enable_important, "!important", "");
+  $important-suffix: if($enable-important, "-imp", "");
+  $important-value: if($enable-important, "!important", "");
 
   // ブレイクポイントなしのベースクラス
   @each $name, $value in $values {
-    $suffix: if($value == "auto", "", $unit_suffix);
+    $suffix: if($value == "auto", "", $unit-suffix);
 
     // クラス名に単位を付ける（%の場合はpctに変換）
     $class_suffix: if($suffix == "%", "pct", $suffix);
     $sep: if($class-prefix == "", "", "-");
 
-    .#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important_suffix} {
-      @content($value, $important_value);
+    .#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important-suffix} {
+      @content($value, $important-value);
     }
   }
 
@@ -53,14 +53,14 @@
   @each $breakpoint-name, $breakpoint-value in $breakpoints {
     @media #{$breakpoint-value} {
       @each $name, $value in $values {
-        $suffix: if($value == "auto", "", $unit_suffix);
+        $suffix: if($value == "auto", "", $unit-suffix);
 
         // クラス名に単位を付ける（%の場合はpctに変換）
         $class_suffix: if($suffix == "%", "pct", $suffix);
         $sep: if($class-prefix == "", "", "-");
 
-        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important_suffix} {
-          @content($value, $important_value);
+        .#{$breakpoint-name}-#{$class-prefix}#{$sep}#{$name}#{$class_suffix}#{$important-suffix} {
+          @content($value, $important-value);
         }
       }
     }

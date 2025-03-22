@@ -1,27 +1,27 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $font-size-generate {
   // 0の場合の処理（単位なし）
   @if map.has-key($font-sizes-px, "0") or map.has-key($font-sizes-em, "0") {
-    @include generate-utility-css("fs", (0), "", $font-size-important) using ($value, $important_value) {
-      font-size: 0 #{$important_value};
+    @include generate-utility-css("fs", (0), "", $font-size-important) using ($value, $important-value) {
+      font-size: 0 #{$important-value};
     }
   }
 
   // px単位（0以外）
-  @include generate-utility-css("fs", $font-sizes-px, "px", $font-size-important) using ($value, $important_value) {
+  @include generate-utility-css("fs", $font-sizes-px, "px", $font-size-important) using ($value, $important-value) {
     @if $value != 0 {
-      font-size: $value + px #{$important_value};
+      font-size: $value + px #{$important-value};
     }
   }
 
   // %単位（0以外）
-  @include generate-utility-css("fs", $font-sizes-em, "em", $font-size-important) using ($value, $important_value) {
+  @include generate-utility-css("fs", $font-sizes-em, "em", $font-size-important) using ($value, $important-value) {
     @if $value != 0 {
-      font-size: $value + em #{$important_value};
+      font-size: $value + em #{$important-value};
     }
   }
 }

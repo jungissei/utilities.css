@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
@@ -20,30 +20,30 @@
   @each $direction-prefix, $direction-value in $directions {
     // 0の場合の処理（単位なし）
     @if map.has-key($margin-px, "0") or map.has-key($margin-percent, "0") {
-      @include generate-utility-css("m#{$direction-prefix}", (0), "", $margin-important) using ($value, $important_value) {
+      @include generate-utility-css("m#{$direction-prefix}", (0), "", $margin-important) using ($value, $important-value) {
         @if $direction-value == "" {
-          margin: 0 #{$important_value};
+          margin: 0 #{$important-value};
         } @else {
-          margin#{$direction-value}: 0 #{$important_value};
+          margin#{$direction-value}: 0 #{$important-value};
         }
       }
     }
 
     // px単位（0以外）
-    @include generate-utility-css("m#{$direction-prefix}", $margin-px, "px", $margin-important) using ($value, $important_value) {
+    @include generate-utility-css("m#{$direction-prefix}", $margin-px, "px", $margin-important) using ($value, $important-value) {
       @if $value != 0 and $direction-value == "" {
-        margin: if($value == "auto", auto, $value + px) #{$important_value};
+        margin: if($value == "auto", auto, $value + px) #{$important-value};
       } @else if $value != 0 {
-        margin#{$direction-value}: if($value == "auto", auto, $value + px) #{$important_value};
+        margin#{$direction-value}: if($value == "auto", auto, $value + px) #{$important-value};
       }
     }
 
     // %単位（0以外）
-    @include generate-utility-css("m#{$direction-prefix}", $margin-percent, "pct", $margin-important) using ($value, $important_value) {
+    @include generate-utility-css("m#{$direction-prefix}", $margin-percent, "pct", $margin-important) using ($value, $important-value) {
       @if $value != 0 and $direction-value == "" {
-        margin: if($value == "auto", auto, $value * 1%) #{$important_value};
+        margin: if($value == "auto", auto, $value * 1%) #{$important-value};
       } @else if $value != 0 {
-        margin#{$direction-value}: if($value == "auto", auto, $value * 1%) #{$important_value};
+        margin#{$direction-value}: if($value == "auto", auto, $value * 1%) #{$important-value};
       }
     }
   }

@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $text-align-generate {
@@ -11,7 +11,7 @@
     "justify": justify
   ) !default;
 
-  @include generate-utility-css("text-align", $text-align-values, null, $text-align-important) using ($value, $important_value) {
-    text-align: $value #{$important_value};
+  @include generate-utility-css("text-align", $text-align-values, null, $text-align-important) using ($value, $important-value) {
+    text-align: $value #{$important-value};
   }
 }

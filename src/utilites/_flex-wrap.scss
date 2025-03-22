@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
@@ -11,7 +11,7 @@
     "wrap-reverse": wrap-reverse
   ) !default;
 
-  @include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important_value) {
-    flex-wrap: $value #{$important_value};
+  @include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important-value) {
+    flex-wrap: $value #{$important-value};
   }
 }
