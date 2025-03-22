@@ -1,30 +1,44 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $basis-generate {
-
   $basis-values: (
-    "auto": auto,
-    "0": 0
+    "auto": auto
   ) !default;
 
-
-  @include generate-utility-css("basis", $basis-values, null, $basis-important) using ($value, $important_value) {
-    flex-basis: $value #{$important_value};
+  @include generate-utility-css("basis", $basis-values, null, $basis-important) using ($value, $important-value) {
+    flex-basis: $value #{$important-value};
   }
 
-  @include generate-utility-css("basis", $basis-px, "px", $basis-important) using ($value, $important_value) {
-    flex-basis: $value + px #{$important_value};
+
+  // 0の場合の処理（単位なし）
+  @if map.has-key($basis-px, "0") or map.has-key($basis-percent, "0") or map.has-key($basis-em, "0") {
+    @include generate-utility-css("basis", (0), "", $basis-important) using ($value, $important-value) {
+      flex-basis: 0 #{$important-value};
+    }
   }
 
-  @include generate-utility-css("basis", $basis-percent, "%", $basis-important) using ($value, $important_value) {
-    flex-basis: $value * 1% #{$important_value};
+  // px単位（0以外）
+  @include generate-utility-css("basis", $basis-px, "px", $basis-important) using ($value, $important-value) {
+    @if $value != 0 {
+      flex-basis: $value + px #{$important-value};
+    }
   }
 
-  @include generate-utility-css("basis", $basis-em, "em", $basis-important) using ($value, $important_value) {
-    flex-basis: $value + em #{$important_value};
+  // %単位（0以外）
+  @include generate-utility-css("basis", $basis-percent, "%", $basis-important) using ($value, $important-value) {
+    @if $value != 0 {
+      flex-basis: $value * 1% #{$important-value};
+    }
+  }
+
+  // em単位（0以外）
+  @include generate-utility-css("basis", $basis-em, "em", $basis-important) using ($value, $important-value) {
+    @if $value != 0 {
+      flex-basis: $value + em #{$important-value};
+    }
   }
 }

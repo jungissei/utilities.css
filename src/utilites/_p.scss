@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $padding-generate {
-
   // 方向の定義
   $directions: (
     "": "", // 全方向
@@ -19,21 +18,32 @@
 
   // 各方向ごとにクラスを生成
   @each $direction-prefix, $direction-value in $directions {
-    // px単位
-    @include generate-utility-css("p#{$direction-prefix}", $padding-px, "px", $padding-important) using ($value, $important_value) {
-      @if $direction-value == "" {
-        padding: $value + px #{$important_value};
-      } @else {
-        padding#{$direction-value}: $value + px #{$important_value};
+    // 0の場合の処理（単位なし）
+    @if map.has-key($padding-px, "0") or map.has-key($padding-percent, "0") {
+      @include generate-utility-css("p#{$direction-prefix}", (0), "", $padding-important) using ($value, $important-value) {
+        @if $direction-value == "" {
+          padding: 0 #{$important-value};
+        } @else {
+          padding#{$direction-value}: 0 #{$important-value};
+        }
       }
     }
 
-    // %単位
-    @include generate-utility-css("p#{$direction-prefix}", $padding-percent, "pct", $padding-important) using ($value, $important_value) {
-      @if $direction-value == "" {
-        padding: $value * 1% #{$important_value};
-      } @else {
-        padding#{$direction-value}: $value * 1% #{$important_value};
+    // px単位（0以外）
+    @include generate-utility-css("p#{$direction-prefix}", $padding-px, "px", $padding-important) using ($value, $important-value) {
+      @if $value != 0 and $direction-value == "" {
+        padding: $value + px #{$important-value};
+      } @else if $value != 0 {
+        padding#{$direction-value}: $value + px #{$important-value};
+      }
+    }
+
+    // %単位（0以外）
+    @include generate-utility-css("p#{$direction-prefix}", $padding-percent, "pct", $padding-important) using ($value, $important-value) {
+      @if $value != 0 and $direction-value == "" {
+        padding: $value * 1% #{$important-value};
+      } @else if $value != 0 {
+        padding#{$direction-value}: $value * 1% #{$important-value};
       }
     }
   }

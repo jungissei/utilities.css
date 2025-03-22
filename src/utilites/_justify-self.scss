@@ -1,10 +1,9 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $justify-self-generate {
-
   $justify-self-values: (
     "auto": auto,
     "start": start,
@@ -13,7 +12,7 @@
     "stretch": stretch,
   ) !default;
 
-  @include generate-utility-css("justify-self", $justify-self-values, null, $justify-self-important) using ($value, $important_value) {
-    justify-self: $value #{$important_value};
+  @include generate-utility-css("justify-self", $justify-self-values, null, $justify-self-important) using ($value, $important-value) {
+    justify-self: $value #{$important-value};
   }
 }

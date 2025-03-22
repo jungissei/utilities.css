@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $display-generate {
-
   $display-values: (
     "block": block,
     "inline": inline,
@@ -15,7 +14,7 @@
     "none": none
   ) !default;
 
-  @include generate-utility-css("", $display-values, null, $display-important) using ($value, $important_value) {
-    display: $value #{$important_value};
+  @include generate-utility-css("", $display-values, null, $display-important) using ($value, $important-value) {
+    display: $value #{$important-value};
   }
 }

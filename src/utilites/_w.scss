@@ -1,27 +1,42 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $width-generate {
-
   $width-values: (
     "auto": auto
   ) !default;
 
-  @include generate-utility-css("w", $width-values, null, $width-important) using ($value, $important_value) {
-    width: $value #{$important_value};
+  @include generate-utility-css("w", $width-values, null, $width-important) using ($value, $important-value) {
+    width: $value #{$important-value};
   }
 
-  @include generate-utility-css("w", $width-px, "px", $width-important) using ($value, $important_value) {
-    width: $value + px #{$important_value};
+  // 0の場合の処理（単位なし）
+  @if map.has-key($width-px, "0") or map.has-key($width-percent, "0") or map.has-key($width-em, "0") {
+    @include generate-utility-css("w", (0), "", $width-important) using ($value, $important-value) {
+      width: 0 #{$important-value};
+    }
   }
 
-  @include generate-utility-css("w", $width-percent, "%", $width-important) using ($value, $important_value) {
-    width: $value * 1% #{$important_value};
+  // px単位（0以外）
+  @include generate-utility-css("w", $width-px, "px", $width-important) using ($value, $important-value) {
+    @if $value != 0 {
+      width: $value + px #{$important-value};
+    }
   }
 
-  @include generate-utility-css("w", $width-em, "em", $width-important) using ($value, $important_value) {
-    width: $value + em #{$important_value};
+  // %単位（0以外）
+  @include generate-utility-css("w", $width-percent, "%", $width-important) using ($value, $important-value) {
+    @if $value != 0 {
+      width: $value * 1% #{$important-value};
+    }
+  }
+
+  // em単位（0以外）
+  @include generate-utility-css("w", $width-em, "em", $width-important) using ($value, $important-value) {
+    @if $value != 0 {
+      width: $value + em #{$important-value};
+    }
   }
 }

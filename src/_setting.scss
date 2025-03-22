@@ -1,14 +1,14 @@
-@use "./common/_functions" as *;
+@use "./common/functions" as *;
 
 // ----------------------------------------------------------------------------
 // # 設定上の注意
-//
+// -----------------------------------------------------------------------------
 // ## 適正なサイズの目安
 // 一般的に100KB未満が理想的とされています。
 // - 大規模ウェブサイト : 500KB以下
 // - 中規模ウェブサイト : 100KB-200KB以下
 // - 小規模ウェブサイト : 50KB以下
-//
+// ----------------------------------------------------------------------------
 // 圧縮技術: gzip圧縮を使用すると、元のファイルサイズを大幅に削減できます。
 // ----------------------------------------------------------------------------
 
@@ -20,8 +20,8 @@
 // @see src/common/_breakpoint.scss
 // --------------------------------------
 $breakpoints: (
-  "pc": "print, screen and (min-width: 768px)",
-  "sp": "screen and (max-width: 767px)",
+  "pc": "print, screen and (width >= 768px)",
+  "sp": "screen and (width <= 767px)",
 ) !default;
 
 
@@ -31,18 +31,18 @@ $breakpoints: (
 // --------------------------------------
 // @see src/utilites/_display.scss
 // --------------------------------------
-$display-generate:  true;  // クラスを生成するかどうか
+$display-generate: true;  // クラスを生成するかどうか
 $display-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
 // @see src/utilites/_fs.scss
 // --------------------------------------
-$font-size-generate:  true;  // クラスを生成するかどうか
+$font-size-generate: true;  // クラスを生成するかどうか
 $font-size-important: false; // !importantをつけるかどうか
 
-$font-sizes-px:generate-range(10, 30); // px単位
-$font-sizes-em:generate-range(1,  10); // em単位
+$font-sizes-px: generate-range(10, 30); // px単位
+$font-sizes-em: generate-range(1,  10); // em単位
 
 
 // --------------------------------------
@@ -58,7 +58,7 @@ $text-align-important: false; // !importantをつけるかどうか
 $width-generate: true;   // クラスを生成するかどうか
 $width-important: false; // !importantをつけるかどうか
 
-$width-px: generate-range(1, 200);      // px単位
+$width-px: generate-range(0, 200);      // px単位
 $width-percent: generate-range(1, 100); // %単位
 $width-em: generate-range(1, 20);       // em単位
 
@@ -90,7 +90,7 @@ $margin-generate: true;   // クラスを生成するかどうか
 $margin-important: false; // !importantをつけるかどうか
 
 $margin-px: generate-range(-100, 100, false);   // px単位
-$margin-percent: generate-range(0, 100, false); // %単位
+$margin-percent: generate-range(1, 1, false); // %単位
 
 
 // --------------------------------------
@@ -100,7 +100,7 @@ $padding-generate: true;   // クラスを生成するかどうか
 $padding-important: false; // !importantをつけるかどうか
 
 $padding-px: generate-range(0, 100, false);      // px単位
-$padding-percent: generate-range(0, 100, false); // %単位
+$padding-percent: generate-range(1, 100, false); // %単位
 
 
 // --------------------------------------
@@ -110,7 +110,7 @@ $gap-generate: true;   // クラスを生成するかどうか
 $gap-important: false; // !importantをつけるかどうか
 
 $gap-px: generate-range(0, 30);      // px単位
-$gap-percent: generate-range(0, 20); // %単位
+$gap-percent: generate-range(1, 20); // %単位
 
 
 // --------------------------------------

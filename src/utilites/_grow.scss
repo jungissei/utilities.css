@@ -1,17 +1,16 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $flex-grow-generate {
-
   $flex-grow-values: (
     "0": 0,
     "1": 1
   ) !default;
 
-  @include generate-utility-css("grow", $flex-grow-values, null, $flex-grow-important) using ($value, $important_value) {
-    flex-grow: $value #{$important_value};
+  @include generate-utility-css("grow", $flex-grow-values, null, $flex-grow-important) using ($value, $important-value) {
+    flex-grow: $value #{$important-value};
   }
 }

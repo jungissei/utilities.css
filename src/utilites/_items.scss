@@ -1,10 +1,9 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $align-items-generate {
-
   $align-items-values: (
     "start": flex-start,
     "end": flex-end,
@@ -13,7 +12,7 @@
     "stretch": stretch
   ) !default;
 
-  @include generate-utility-css("items", $align-items-values, null, $align-items-important) using ($value, $important_value) {
-    align-items: $value #{$important_value};
+  @include generate-utility-css("items", $align-items-values, null, $align-items-important) using ($value, $important-value) {
+    align-items: $value #{$important-value};
   }
 }

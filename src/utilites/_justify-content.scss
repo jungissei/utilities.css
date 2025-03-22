@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $justify-content-generate {
-
   $justify-content-values: (
     "start": flex-start,
     "end": flex-end,
@@ -18,7 +17,7 @@
     "normal": normal,
   ) !default;
 
-  @include generate-utility-css("justify", $justify-content-values, null, $justify-content-important) using ($value, $important_value) {
-    justify-content: $value #{$important_value};
+  @include generate-utility-css("justify", $justify-content-values, null, $justify-content-important) using ($value, $important-value) {
+    justify-content: $value #{$important-value};
   }
 }

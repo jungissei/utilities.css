@@ -1,17 +1,16 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $flex-shrink-generate {
-
   $flex-shrink-values: (
     "0": 0,
     "1": 1
   ) !default;
 
-  @include generate-utility-css("shrink", $flex-shrink-values, null, $flex-shrink-important) using ($value, $important_value) {
-    flex-shrink: $value #{$important_value};
+  @include generate-utility-css("shrink", $flex-shrink-values, null, $flex-shrink-important) using ($value, $important-value) {
+    flex-shrink: $value #{$important-value};
   }
 }

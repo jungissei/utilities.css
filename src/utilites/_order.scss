@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 @if $order-generate {
-
-  @include generate-utility-css("order", $order-number, null, $order-important) using ($value, $important_value) {
-    order: $value #{$important_value};
+  @include generate-utility-css("order", $order-number, null, $order-important) using ($value, $important-value) {
+    order: $value #{$important-value};
   }
 }

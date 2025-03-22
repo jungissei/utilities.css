@@ -1,33 +1,81 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $gap-generate {
-
-  @include generate-utility-css("gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
-    gap: $value + px #{$important_value};
+  // --------------------------------------
+  // gap
+  // --------------------------------------
+  // 0の場合の処理（単位なし）
+  @if map.has-key($gap-px, "0") or map.has-key($gap-percent, "0") {
+    @include generate-utility-css("gap", (0), "", $gap-important) using ($value, $important-value) {
+      gap: 0 #{$important-value};
+    }
   }
 
-  @include generate-utility-css("gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
-    gap: $value * 1% #{$important_value};
+  // px単位（0以外）
+  @include generate-utility-css("gap", $gap-px, "px", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      gap: $value + px #{$important-value};
+    }
   }
 
-  @include generate-utility-css("col-gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
-    column-gap: $value + px #{$important_value};
+  // %単位（0以外）
+  @include generate-utility-css("gap", $gap-percent, "%", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      gap: $value * 1% #{$important-value};
+    }
   }
 
-  @include generate-utility-css("col-gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
-    column-gap: $value * 1% #{$important_value};
+  // --------------------------------------
+  // col-gap
+  // --------------------------------------
+  // 0の場合の処理（単位なし）
+  @if map.has-key($gap-px, "0") or map.has-key($gap-percent, "0") {
+    @include generate-utility-css("col-gap", (0), "", $gap-important) using ($value, $important-value) {
+      column-gap: 0 #{$important-value};
+    }
   }
 
-  @include generate-utility-css("row-gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
-    row-gap: $value + px #{$important_value};
+  // px単位（0以外）
+  @include generate-utility-css("col-gap", $gap-px, "px", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      column-gap: $value + px #{$important-value};
+    }
   }
 
-  @include generate-utility-css("row-gap", $gap-percent, "%", $gap-important) using ($value, $important_value) {
-    row-gap: $value * 1% #{$important_value};
+  // %単位（0以外）
+  @include generate-utility-css("col-gap", $gap-percent, "%", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      column-gap: $value * 1% #{$important-value};
+    }
+  }
+
+
+  // --------------------------------------
+  // row-gap
+  // --------------------------------------
+  // 0の場合の処理（単位なし）
+  @if map.has-key($gap-px, "0") or map.has-key($gap-percent, "0") {
+    @include generate-utility-css("row-gap", (0), "", $gap-important) using ($value, $important-value) {
+      row-gap: 0 #{$important-value};
+    }
+  }
+
+  // px単位（0以外）
+  @include generate-utility-css("row-gap", $gap-px, "px", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      row-gap: $value + px #{$important-value};
+    }
+  }
+
+  // %単位（0以外）
+  @include generate-utility-css("row-gap", $gap-percent, "%", $gap-important) using ($value, $important-value) {
+    @if $value != 0 {
+      row-gap: $value * 1% #{$important-value};
+    }
   }
 }
 

@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../common/_breakpoint" as *;
-@use "../common/_functions" as *;
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
 @use "../setting" as *;
 
 
 @if $align-self-generate {
-
   $align-self-values: (
     "start": flex-start,
     "end": flex-end,
@@ -15,7 +14,7 @@
     "auto": auto
   ) !default;
 
-  @include generate-utility-css("self", $align-self-values, null, $align-self-important) using ($value, $important_value) {
-    align-self: $value #{$important_value};
+  @include generate-utility-css("self", $align-self-values, null, $align-self-important) using ($value, $important-value) {
+    align-self: $value #{$important-value};
   }
 }
