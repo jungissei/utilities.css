@@ -4,7 +4,6 @@
 @use "../setting" as *;
 
 @if $align-items-generate {
-
   $align-items-values: (
     "start": flex-start,
     "end": flex-end,

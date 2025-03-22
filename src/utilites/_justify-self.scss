@@ -4,7 +4,6 @@
 @use "../setting" as *;
 
 @if $justify-self-generate {
-
   $justify-self-values: (
     "auto": auto,
     "start": start,

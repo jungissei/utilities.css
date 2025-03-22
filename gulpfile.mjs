@@ -7,22 +7,20 @@ import sourcemaps from 'gulp-sourcemaps';
 import rename from 'gulp-rename';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import cssbeautify from 'gulp-cssbeautify';
 
 const execAsync = promisify(exec);
 const sassCompiler = sass(dartSass);
 
-// Stylelintタスクを追加
+// Stylelintタスクを修正（--fixオプションを追加）
 gulp.task('lint-scss', async function() {
   try {
-    const { stdout, stderr } = await execAsync('npx stylelint "./src/**/*.scss"');
+    const { stdout, stderr } = await execAsync('npx stylelint "./src/**/*.scss" --fix');
     if (stdout) console.log(stdout);
     if (stderr) console.error(stderr);
   } catch (error) {
     console.error('\x1b[31mStylelint found issues:\x1b[0m', error.stdout);
     // エラーがあった場合でもタスクを継続
-
-    // ビルドを停止させたい場合以下のコメントアウトを外す
-    // throw new Error('Stylelint check failed');
   }
 });
 
@@ -33,10 +31,16 @@ gulp.task('sass', gulp.series('lint-scss', function() {
     .pipe(sourcemaps.init())
     .pipe(sassCompiler().on('error', sassCompiler.logError))
     .pipe(autoprefixer())
+    .pipe(cssbeautify({
+      indent: '  ',
+      autosemicolon: true,
+      openbrace: 'end-of-line',
+      removeEmptyRules: true
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'));
 
-  // 圧縮版の生成
+  // 圧縮版の生成（圧縮版は整形不要なのでそのまま）
   const minified = gulp.src('./src/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sassCompiler().on('error', sassCompiler.logError))

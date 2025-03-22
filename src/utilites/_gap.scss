@@ -5,7 +5,6 @@
 
 
 @if $gap-generate {
-
   @include generate-utility-css("gap", $gap-px, "px", $gap-important) using ($value, $important_value) {
     gap: $value + px #{$important_value};
   }

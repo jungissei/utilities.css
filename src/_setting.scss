@@ -31,18 +31,18 @@ $breakpoints: (
 // --------------------------------------
 // @see src/utilites/_display.scss
 // --------------------------------------
-$display-generate:  true;  // クラスを生成するかどうか
+$display-generate: true;  // クラスを生成するかどうか
 $display-important: false; // !importantをつけるかどうか
 
 
 // --------------------------------------
 // @see src/utilites/_fs.scss
 // --------------------------------------
-$font-size-generate:  true;  // クラスを生成するかどうか
+$font-size-generate: true;  // クラスを生成するかどうか
 $font-size-important: false; // !importantをつけるかどうか
 
-$font-sizes-px:generate-range(10, 30); // px単位
-$font-sizes-em:generate-range(1,  10); // em単位
+$font-sizes-px: generate-range(10, 30); // px単位
+$font-sizes-em: generate-range(1,  10); // em単位
 
 
 // --------------------------------------
