@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
+@use "../setting" as *;
+
+@if $list-generate {
+  $list-style-type-values: (
+    "disc": disc,
+    "decimal": decimal,
+    "none": none,
+  ) !default;
+
+  @include generate-utility-css("list", $list-style-type-values, null, $list-important) using ($value, $important-value) {
+    list-style-type: $value #{$important-value};
+  }
+
+
+
+  $list-style-position-values: (
+    "inside": inside,
+    "outside": outside,
+  ) !default;
+
+  @include generate-utility-css("list", $list-style-position-values, null, $list-important) using ($value, $important-value) {
+    list-style-position: $value #{$important-value};
+  }
+}

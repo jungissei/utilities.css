@@ -186,3 +186,10 @@ $justify-content-important: false; // !importantをつけるかどうか
 // --------------------------------------
 $justify-self-generate: true;   // クラスを生成するかどうか
 $justify-self-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
+// @see src/utilites/_list.scss
+// --------------------------------------
+$list-generate: true;   // クラスを生成するかどうか
+$list-important: false; // !importantをつけるかどうか
