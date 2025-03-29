@@ -11,7 +11,7 @@
     "wrap-reverse": wrap-reverse
   ) !default;
 
-  @include generate-utility-css("flex-wrap", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important-value) {
+  @include generate-utility-css("flex", $flex-wrap-values, null, $flex-wrap-important) using ($value, $important-value) {
     flex-wrap: $value #{$important-value};
   }
 }
