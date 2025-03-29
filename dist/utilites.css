@@ -4502,6 +4502,22 @@
   }
 }
 
+.m-auto {
+  margin: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-m-auto {
+    margin: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-m-auto {
+    margin: auto;
+  }
+}
+
 .m-0 {
   margin: 0;
 }
@@ -6935,6 +6951,22 @@
 @media screen and (width <= 767px) {
   .sp-m-1pct {
     margin: 1%;
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-mt-auto {
+    margin-top: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-mt-auto {
+    margin-top: auto;
   }
 }
 
@@ -9374,6 +9406,22 @@
   }
 }
 
+.mr-auto {
+  margin-right: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-mr-auto {
+    margin-right: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-mr-auto {
+    margin-right: auto;
+  }
+}
+
 .mr-0 {
   margin-right: 0;
 }
@@ -11807,6 +11855,22 @@
 @media screen and (width <= 767px) {
   .sp-mr-1pct {
     margin-right: 1%;
+  }
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-mb-auto {
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-mb-auto {
+    margin-bottom: auto;
   }
 }
 
@@ -14246,6 +14310,22 @@
   }
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-ml-auto {
+    margin-left: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-ml-auto {
+    margin-left: auto;
+  }
+}
+
 .ml-0 {
   margin-left: 0;
 }
@@ -16682,6 +16762,22 @@
   }
 }
 
+.mblock-auto {
+  margin-block: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-mblock-auto {
+    margin-block: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-mblock-auto {
+    margin-block: auto;
+  }
+}
+
 .mblock-0 {
   margin-block: 0;
 }
@@ -19115,6 +19211,22 @@
 @media screen and (width <= 767px) {
   .sp-mblock-1pct {
     margin-block: 1%;
+  }
+}
+
+.minline-auto {
+  margin-inline: auto;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-minline-auto {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-minline-auto {
+    margin-inline: auto;
   }
 }
 

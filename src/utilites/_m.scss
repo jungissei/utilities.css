@@ -15,9 +15,19 @@
     "block": "-block",
     "inline": "-inline"
   );
+  $margin-values: (
+    "auto": auto
+  ) !default;
+
+
 
   // 各方向ごとにクラスを生成
   @each $direction-prefix, $direction-value in $directions {
+    // $margin-valuesの設定
+    @include generate-utility-css("m#{$direction-prefix}", $margin-values, "", $margin-important) using ($value, $important-value) {
+      margin#{$direction-value}: $value #{$important-value};
+    }
+
     // 0の場合の処理（単位なし）
     @if map.has-key($margin-px, "0") or map.has-key($margin-percent, "0") {
       @include generate-utility-css("m#{$direction-prefix}", (0), "", $margin-important) using ($value, $important-value) {
