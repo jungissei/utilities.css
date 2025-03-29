@@ -22,6 +22,7 @@ CSSのユーティリティクラスを生成するツールです。
 |:----|:----|:----|
 |display|なし|`/src/utilites/_display.scss`|
 |font-size|`fs`|`/src/utilites/_fs.scss`|
+|font-weight|`font`|`/src/utilites/_font.scss`|
 |text-align|`text-align`|`/src/utilites/_text-align.scss`|
 |width|`w`|`/src/utilites/_w.scss`|
 |max-width|`max-w`|`/src/utilites/_max-w.scss`|
@@ -58,6 +59,20 @@ CSSのユーティリティクラスを生成するツールです。
 |:----|:----|
 |font-size: 1px;|`.fs-1px`|
 |font-size: 1em;|`.fs-1em`|
+
+
+### font-weight
+|declaration（CSS宣言）|基本クラス名|
+|:----|:----|
+|font-weight: 100;|`.font-thin`|
+|font-weight: 200;|`.font-extralight`|
+|font-weight: 300;|`.font-light`|
+|font-weight: 400;|`.font-normal`|
+|font-weight: 500;|`.font-medium`|
+|font-weight: 600;|`.font-semibold`|
+|font-weight: 700;|`.font-bold`|
+|font-weight: 800;|`.font-extrabold`|
+|font-weight: 900;|`.font-black`|
 
 
 ### text-align
