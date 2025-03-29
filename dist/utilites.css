@@ -50806,42 +50806,70 @@
 }
 
 .list-disc {
-  list-style-type: "disc";
+  list-style-type: disc;
 }
 
 .list-decimal {
-  list-style-type: "decimal";
+  list-style-type: decimal;
 }
 
 .list-none {
-  list-style-type: "none";
+  list-style-type: none;
 }
 
 @media print, screen and (width >= 768px) {
   .pc-list-disc {
-    list-style-type: "disc";
+    list-style-type: disc;
   }
 
   .pc-list-decimal {
-    list-style-type: "decimal";
+    list-style-type: decimal;
   }
 
   .pc-list-none {
-    list-style-type: "none";
+    list-style-type: none;
   }
 }
 
 @media screen and (width <= 767px) {
   .sp-list-disc {
-    list-style-type: "disc";
+    list-style-type: disc;
   }
 
   .sp-list-decimal {
-    list-style-type: "decimal";
+    list-style-type: decimal;
   }
 
   .sp-list-none {
-    list-style-type: "none";
+    list-style-type: none;
+  }
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-outside {
+  list-style-position: outside;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-list-inside {
+    list-style-position: inside;
+  }
+
+  .pc-list-outside {
+    list-style-position: outside;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-list-inside {
+    list-style-position: inside;
+  }
+
+  .sp-list-outside {
+    list-style-position: outside;
   }
 }
 /*# sourceMappingURL=utilites.css.map */
