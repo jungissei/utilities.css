@@ -39,6 +39,7 @@ CSSのユーティリティクラスを生成するツールです。
 |order|`order`|`/src/utilites/_order.scss`|
 |justify-content|`justify`|`/src/utilites/_justify-content.scss`|
 |justify-self|`justify-self`|`/src/utilites/_justify-self.scss`|
+|list-style-type|`list`|`/src/utilites/_list.scss`|
 
 
 ## CSSプロパティ値名`{value-name}`の一覧
@@ -243,6 +244,14 @@ CSSのユーティリティクラスを生成するツールです。
 |justify-self: end;|`.justify-self-end`|
 |justify-self: center;|`.justify-self-center`|
 |justify-self: stretch;|`.justify-self-stretch`|
+
+
+### list-style-type
+|CSS宣言|基本クラス名|
+|:----|:----|
+|list-style-type: disc;|`.list-disc`|
+|list-style-type: decimal;|`.list-decimal`|
+|list-style-type: none;|`.list-none`|
 
 
 ## CSSの生成＆設定ファイル

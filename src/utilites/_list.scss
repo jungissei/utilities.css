@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
+@use "../setting" as *;
+
+@if $list-generate {
+  $list-values: (
+    "disc": "disc",
+    "decimal": "decimal",
+    "none": "none",
+  ) !default;
+
+  @include generate-utility-css("list", $list-values, null, $list-important) using ($value, $important-value) {
+    list-style-type: $value #{$important-value};
+  }
+}
