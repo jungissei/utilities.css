@@ -454,6 +454,118 @@
   }
 }
 
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+@media print, screen and (width >= 768px) {
+  .pc-font-thin {
+    font-weight: 100;
+  }
+
+  .pc-font-extralight {
+    font-weight: 200;
+  }
+
+  .pc-font-light {
+    font-weight: 300;
+  }
+
+  .pc-font-normal {
+    font-weight: 400;
+  }
+
+  .pc-font-medium {
+    font-weight: 500;
+  }
+
+  .pc-font-semibold {
+    font-weight: 600;
+  }
+
+  .pc-font-bold {
+    font-weight: 700;
+  }
+
+  .pc-font-extrabold {
+    font-weight: 800;
+  }
+
+  .pc-font-black {
+    font-weight: 900;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .sp-font-thin {
+    font-weight: 100;
+  }
+
+  .sp-font-extralight {
+    font-weight: 200;
+  }
+
+  .sp-font-light {
+    font-weight: 300;
+  }
+
+  .sp-font-normal {
+    font-weight: 400;
+  }
+
+  .sp-font-medium {
+    font-weight: 500;
+  }
+
+  .sp-font-semibold {
+    font-weight: 600;
+  }
+
+  .sp-font-bold {
+    font-weight: 700;
+  }
+
+  .sp-font-extrabold {
+    font-weight: 800;
+  }
+
+  .sp-font-black {
+    font-weight: 900;
+  }
+}
+
 .text-align-left {
   text-align: left;
 }

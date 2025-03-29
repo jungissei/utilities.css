@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "../common/breakpoint" as *;
+@use "../common/functions" as *;
+@use "../setting" as *;
+
+@if $font-generate {
+  $font-values: (
+    "thin": 100,
+    "extralight": 200,
+    "light": 300,
+    "normal": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800,
+    "black": 900,
+  ) !default;
+
+  @include generate-utility-css("font", $font-values, null, $font-important) using ($value, $important-value) {
+    font-weight: $value #{$important-value};
+  }
+}

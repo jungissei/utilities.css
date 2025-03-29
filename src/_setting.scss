@@ -46,6 +46,13 @@ $font-sizes-em: generate-range(1,  10); // em単位
 
 
 // --------------------------------------
+// @see src/utilites/_fs.scss
+// --------------------------------------
+$font-generate: true;  // クラスを生成するかどうか
+$font-important: false; // !importantをつけるかどうか
+
+
+// --------------------------------------
 // @see src/utilites/_text-align.scss
 // --------------------------------------
 $text-align-generate: true; // クラスを生成するかどうか
